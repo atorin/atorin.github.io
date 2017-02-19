@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>Casual perambulations (Posts about finite difference)</title><link>http://blog.albertotorin.it/</link><description></description><atom:link rel="self" type="application/rss+xml" href="http://blog.albertotorin.it/categories/finite-difference.xml"></atom:link><language>en</language><lastBuildDate>Sun, 19 Feb 2017 16:19:25 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Energy conservation in a finite difference simulation of an SHO</title><link>http://blog.albertotorin.it/blog/energy-fd-sho/</link><dc:creator>Alberto Torin</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+    &lt;div class="container" id="notebook-container"&gt;
+
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;One key concept in physics is the conservation of energy---in an isolated system, the total energy cannot increase or decrease, it simply remains constant. Thus, the simple lossless harmonic oscillator model defined by the equation&lt;/p&gt;
+$$ M\frac{d^2 u}{dt^2} = -K u $$&lt;p&gt;has an associated energy $H$ defined as&lt;/p&gt;
+$$ H(t) = \frac{M}{2} \left( \frac{du}{dt} \right)^2 + \frac{K}{2} u^2, \qquad \frac{d}{dt} H =0,$$&lt;p&gt;which is conserved.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Such a concept can also be applied in a numerical simulation, where the existence of a numerical energy-like quantity with certain properties can become a powerful tool in guaranteeing the stability of the scheme.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://blog.albertotorin.it/blog/energy-fd-sho/"&gt;Read more…&lt;/a&gt; (45 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>finite difference</category><category>julia</category><category>jupyter</category><category>sho</category><guid>http://blog.albertotorin.it/blog/energy-fd-sho/</guid><pubDate>Sat, 12 Nov 2016 14:00:00 GMT</pubDate></item><item><title>Anatomy of a finite difference scheme: Simulating a simple harmonic oscillator with Julia</title><link>http://blog.albertotorin.it/blog/anatomy-fd-sho/</link><dc:creator>Alberto Torin</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+    &lt;div class="container" id="notebook-container"&gt;
+
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;In this post, I will try to analyse a finite difference simulation of a simple harmonic oscillator (SHO) with damping, and code the algorithm using the programming language Julia. If you are not familiar with Julia, I recommend you visit this website: &lt;a href="http://www.julialang.org"&gt;http://www.julialang.org&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;As you probably know, the equation for an SHO is the following:&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+$$\frac{d^2 u}{dt^2} = -\omega_0^2 u - 2\sigma \frac{du}{dt} $$
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;where $u$ is the position of the oscillator around the equilibrium point, and $\omega_0$ and $\sigma$ are two positive parameters. This second order differential equation requires two initial conditions to be fully specified, the initial position and velocity of the SHO, i.e.:&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+$$u(0) = u_0, \qquad \text{ and } \qquad \frac{du}{dt}\Bigr|_{t=0} = v_0.$$
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;A finite difference implementation of this equation requires the discretisation of time in integer multiples of $k$, the time step. Let $u^n$ denote the discrete approximation to $u(t)$ calculated at the discrete time $nk$, with $n$ positive integer. Given the initial values $u^0$ and $u^1$, the idea is to find a recursion that gives $u^2, \dots, u^n$ in a way that is consistent with the continuous equation. Many different schemes are available, which present different properties. One possibility is the following:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://blog.albertotorin.it/blog/anatomy-fd-sho/"&gt;Read more…&lt;/a&gt; (24 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>finite difference</category><category>julia</category><category>jupyter</category><category>sho</category><guid>http://blog.albertotorin.it/blog/anatomy-fd-sho/</guid><pubDate>Tue, 20 Sep 2016 14:00:00 GMT</pubDate></item></channel></rss>

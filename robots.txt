@@ -1,0 +1,4 @@
+Sitemap: http://blog.albertotorin.it/sitemapindex.xml
+
+User-Agent: *
+Host: blog.albertotorin.it

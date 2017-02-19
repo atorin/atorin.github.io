@@ -1,1 +1,187 @@
-Hello World
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="A blog about numerical simulation.">
+<meta name="viewport" content="width=device-width">
+<title>Casual perambulations</title>
+<link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
+<link rel="canonical" href="http://blog.albertotorin.it/">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'center' to center equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="blog/energy-fd-sho/" type="text/html">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div id="container">
+         
+    <header id="header"><h1 id="brand"><a href="http://blog.albertotorin.it/" title="Casual perambulations" rel="home">
+
+        <span id="blog-title">Casual perambulations</span>
+    </a></h1>
+
+        
+
+        
+    <nav id="menu"><ul>
+<li><a href="about">About</a></li>
+                <li><a href="archive.html">Archive</a></li>
+                <li><a href="categories/">Tags</a></li>
+                <li><a href="rss.xml">RSS feed</a></li>
+    
+    
+    </ul></nav></header><main id="content"><div class="postindex">
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/energy-fd-sho/" class="u-url">Energy conservation in a finite difference simulation of an SHO</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Alberto Torin
+            </span></p>
+            <p class="dateline"><a href="blog/energy-fd-sho/" rel="bookmark"><time class="published dt-published" datetime="2016-11-12T15:00:00+01:00" title="2016-11-12 15:00">2016-11-12 15:00</time></a></p>
+        </div>
+    </header><div class="p-summary entry-summary">
+    <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>One key concept in physics is the conservation of energy---in an isolated system, the total energy cannot increase or decrease, it simply remains constant. Thus, the simple lossless harmonic oscillator model defined by the equation</p>
+$$ M\frac{d^2 u}{dt^2} = -K u $$<p>has an associated energy $H$ defined as</p>
+$$ H(t) = \frac{M}{2} \left( \frac{du}{dt} \right)^2 + \frac{K}{2} u^2, \qquad \frac{d}{dt} H =0,$$<p>which is conserved.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Such a concept can also be applied in a numerical simulation, where the existence of a numerical energy-like quantity with certain properties can become a powerful tool in guaranteeing the stability of the scheme.</p>
+<p class="more"><a href="blog/energy-fd-sho/">Read more…</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/anatomy-fd-sho/" class="u-url">Anatomy of a finite difference scheme: Simulating a simple harmonic oscillator with Julia</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Alberto Torin
+            </span></p>
+            <p class="dateline"><a href="blog/anatomy-fd-sho/" rel="bookmark"><time class="published dt-published" datetime="2016-09-20T15:00:00+01:00" title="2016-09-20 15:00">2016-09-20 15:00</time></a></p>
+        </div>
+    </header><div class="p-summary entry-summary">
+    <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In this post, I will try to analyse a finite difference simulation of a simple harmonic oscillator (SHO) with damping, and code the algorithm using the programming language Julia. If you are not familiar with Julia, I recommend you visit this website: <a href="http://www.julialang.org">http://www.julialang.org</a>.</p>
+<p>As you probably know, the equation for an SHO is the following:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$\frac{d^2 u}{dt^2} = -\omega_0^2 u - 2\sigma \frac{du}{dt} $$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>where $u$ is the position of the oscillator around the equilibrium point, and $\omega_0$ and $\sigma$ are two positive parameters. This second order differential equation requires two initial conditions to be fully specified, the initial position and velocity of the SHO, i.e.:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$u(0) = u_0, \qquad \text{ and } \qquad \frac{du}{dt}\Bigr|_{t=0} = v_0.$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A finite difference implementation of this equation requires the discretisation of time in integer multiples of $k$, the time step. Let $u^n$ denote the discrete approximation to $u(t)$ calculated at the discrete time $nk$, with $n$ positive integer. Given the initial values $u^0$ and $u^1$, the idea is to find a recursion that gives $u^2, \dots, u^n$ in a way that is consistent with the continuous equation. Many different schemes are available, which present different properties. One possibility is the following:</p>
+<p class="more"><a href="blog/anatomy-fd-sho/">Read more…</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+    </div>
+    </article>
+</div>
+
+
+
+
+
+            <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'center' to center equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script></main><footer id="footer"><p>Contents © 2017         <a href="mailto:info@albertotorin.it">Alberto Torin</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
+            
+        </footer>
+</div>
+    
+    
+
+    
+    
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	
+	  ga('create', 'UA-72512940-2', 'auto');
+	  ga('send', 'pageview');
+	
+	</script>
+</body>
+</html>
