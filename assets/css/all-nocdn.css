@@ -427,7 +427,7 @@ table.codetable { width: 100%;} td.linenos {text-align: right; width: 4em;}
 
 body {
 	color: #4F5151;
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: Palatino, Helvetica, Arial, sans-serif;
 	font-size: 17px;
 	line-height: 1.4;
 	padding: 1em;
@@ -607,7 +607,7 @@ body {
 	text-decoration: none;
 }
 :visited {
-	color: #6830BB;
+	color: #1168CC;
 }
 :link:hover, :visited:hover {
 	color: #0d53a3;
@@ -723,7 +723,8 @@ pre.code, code {
 	a,
 	a:visited {
 		text-decoration: underline;
-	}
+        color: #1168CC;
+    }
 
 	a[href]:after {
 		content: " (" attr(href) ")";
