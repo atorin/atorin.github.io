@@ -15,11 +15,19 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.albertotorin.it/categories/jupyter.xml</loc>
-  <lastmod>2017-02-26T21:29:00Z</lastmod>
+  <lastmod>2017-03-24T21:50:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://blog.albertotorin.it/categories/matlab.xml</loc>
+  <lastmod>2017-03-24T21:50:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.albertotorin.it/categories/sho.xml</loc>
-  <lastmod>2017-02-19T16:19:00Z</lastmod>
+  <lastmod>2017-03-24T21:50:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://blog.albertotorin.it/categories/string.xml</loc>
+  <lastmod>2017-03-24T21:50:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.albertotorin.it/galleries/rss.xml</loc>
@@ -27,10 +35,10 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.albertotorin.it/rss.xml</loc>
-  <lastmod>2017-02-26T21:29:00Z</lastmod>
+  <lastmod>2017-03-24T21:50:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.albertotorin.it/sitemap.xml</loc>
-  <lastmod>2017-03-19T12:14:00Z</lastmod>
+  <lastmod>2017-03-24T21:50:00Z</lastmod>
  </sitemap>
 </sitemapindex>
