@@ -23,7 +23,7 @@
  </url>
  <url>
   <loc>http://blog.albertotorin.it/archive.html</loc>
-  <lastmod>2017-03-24T21:18:00Z</lastmod>
+  <lastmod>2017-03-26T17:20:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.albertotorin.it/blog/anatomy-fd-sho/</loc>
@@ -34,12 +34,16 @@
   <lastmod>2016-11-12T17:43:00Z</lastmod>
  </url>
  <url>
+  <loc>http://blog.albertotorin.it/blog/mdof-sound-synthesis/</loc>
+  <lastmod>2017-03-26T17:20:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://blog.albertotorin.it/blog/mdof-systems/</loc>
   <lastmod>2017-03-24T21:29:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.albertotorin.it/categories/</loc>
-  <lastmod>2017-03-24T21:18:00Z</lastmod>
+  <lastmod>2017-03-26T17:20:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.albertotorin.it/categories/finite-difference/</loc>
@@ -56,6 +60,10 @@
  <url>
   <loc>http://blog.albertotorin.it/categories/matlab/</loc>
   <lastmod>2017-03-24T21:18:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.albertotorin.it/categories/modal/</loc>
+  <lastmod>2017-03-26T17:20:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.albertotorin.it/categories/sho/</loc>
