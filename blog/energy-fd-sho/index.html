@@ -199,7 +199,7 @@ $$ \delta_{t-} H^{n+1/2} = 0. $$<p>Notice that the discrete energy is defined at
 <span class="c"># Calculate the number of iterations</span>
 <span class="n">NF</span><span class="o">=</span><span class="n">floor</span><span class="p">(</span><span class="n">SR</span><span class="o">*</span><span class="n">T</span><span class="p">)</span>
 
-<span class="c"># Calculate ω0 and a0. They will be useful later</span>
+<span class="c"># Calculate ω0. This will be useful later</span>
 <span class="n">ω0</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="nb">pi</span><span class="o">*</span><span class="n">f</span>
 
 <span class="c"># Check the stability condition</span>
@@ -1477,7 +1477,7 @@ fig.select("#img-6621ffb1-16")
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As can be seen, the energy curve is not "dead flat", but presents some variations. By normalising the values, however, it is possible to see that such discrepancies are present only the last few digits of the floating point representation of the numbers (remember that machine epsilon in double precision is roughly $2.22 \cdot 10^{-16}$).</p>
+<p>As can be seen, the energy curve is not "dead flat", but presents some variations. By normalising the values, however, it is possible to see that such discrepancies are present only in the last few digits of the floating point representation of the numbers (remember that machine epsilon in double precision is roughly $2.22 \cdot 10^{-16}$).</p>
 
 </div>
 </div>
@@ -2683,7 +2683,7 @@ fig.select("#img-7939f482-16")
 <h3 id="See-also...">See also...<a class="anchor-link" href="#See-also...">¶</a>
 </h3>
 <p>Mathematical proofs: S. Bilbao, <em>Numerical Sound Synthesis</em>, John Wiley &amp; Sons, Chichester, UK, 2009</p>
-<p>Energy normalisation: A. Torin, <a href="http://www2.ph.ed.ac.uk/~s1164558/thesis.html">PhD Thesis</a></p>
+<p>Energy normalisation: A. Torin, <a href="http://www2.ph.ed.ac.uk/~s1164558/thesis.html"><em>Percussion Instrument Modelling In 3D: Sound Synthesis Through Time Domain Numerical Simulation</em></a>, PhD Thesis, The University of Edinburgh, 2016</p>
 <p>Floating point representation: D. Goldberg, <a href="http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html"><em>What Every Computer Scientist Should Know About Floating-Point Arithmetic</em></a></p>
 
 </div>
