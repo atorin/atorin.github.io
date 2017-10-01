@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>Anatomy of a finite difference scheme: Simulating a simple harmonic oscillator with Julia | Casual perambulations</title>
+<title>Anatomy of a finite difference scheme: How to simulate a simple harmonic oscillator with Julia | Casual perambulations</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
@@ -26,7 +26,7 @@ MathJax.Hub.Config({
 </script><!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Alberto Torin">
 <link rel="next" href="../energy-fd-sho/" title="Energy conservation in a finite difference simulation of an SHO" type="text/html">
 <meta property="og:site_name" content="Casual perambulations">
-<meta property="og:title" content="Anatomy of a finite difference scheme: Simulating a simple harmonic os">
+<meta property="og:title" content="Anatomy of a finite difference scheme: How to simulate a simple harmon">
 <meta property="og:url" content="http://blog.albertotorin.it/blog/anatomy-fd-sho/">
 <meta property="og:description" content="In this post, I will try to analyse a finite difference simulation of a simple harmonic oscillator (SHO) with damping, and code the algorithm using the programming language Julia. If you are not famil">
 <meta property="og:type" content="article">
@@ -34,6 +34,7 @@ MathJax.Hub.Config({
 <meta property="article:tag" content="finite difference">
 <meta property="article:tag" content="julia">
 <meta property="article:tag" content="jupyter">
+<meta property="article:tag" content="oscillator">
 <meta property="article:tag" content="sho">
 </head>
 <body>
@@ -55,7 +56,7 @@ MathJax.Hub.Config({
                 <li><a href="../../rss.xml">RSS feed</a></li>
     
     
-    </ul></nav></header><main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Anatomy of a finite difference scheme: Simulating a simple harmonic oscillator with Julia</a></h1>
+    </ul></nav></header><main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Anatomy of a finite difference scheme: How to simulate a simple harmonic oscillator with Julia</a></h1>
 
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
@@ -1681,6 +1682,7 @@ fig.select("#img-c204e4be-16")
 <li><a class="tag p-category" href="../../categories/finite-difference/" rel="tag">finite difference</a></li>
             <li><a class="tag p-category" href="../../categories/julia/" rel="tag">julia</a></li>
             <li><a class="tag p-category" href="../../categories/jupyter/" rel="tag">jupyter</a></li>
+            <li><a class="tag p-category" href="../../categories/oscillator/" rel="tag">oscillator</a></li>
             <li><a class="tag p-category" href="../../categories/sho/" rel="tag">sho</a></li>
         </ul>
 <ul class="pager hidden-print">

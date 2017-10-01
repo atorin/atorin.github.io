@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Casual perambulations (Posts about energy)</title><link>http://blog.albertotorin.it/</link><description></description><atom:link rel="self" type="application/rss+xml" href="http://blog.albertotorin.it/categories/energy.xml"></atom:link><language>en</language><lastBuildDate>Sun, 01 Oct 2017 20:27:52 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Energy conservation in a finite difference simulation of a simple harmonic oscillator</title><link>http://blog.albertotorin.it/blog/energy-fd-sho/</link><dc:creator>Alberto Torin</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+    &lt;div class="container" id="notebook-container"&gt;
+
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;One key concept in physics is the conservation of energy---in an isolated system, the total energy cannot increase or decrease, it simply remains constant. Thus, the simple lossless harmonic oscillator model defined by the equation&lt;/p&gt;
+$$ M\frac{d^2 u}{dt^2} = -K u $$&lt;p&gt;has an associated energy $H$ defined as&lt;/p&gt;
+$$ H(t) = \frac{M}{2} \left( \frac{du}{dt} \right)^2 + \frac{K}{2} u^2, \qquad \frac{d}{dt} H =0,$$&lt;p&gt;which is conserved.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Such a concept can also be applied in a numerical simulation, where the existence of a numerical energy-like quantity with certain properties can become a powerful tool in guaranteeing the stability of the scheme.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://blog.albertotorin.it/blog/energy-fd-sho/"&gt;Read more…&lt;/a&gt; (45 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>energy</category><category>finite difference</category><category>julia</category><category>jupyter</category><category>oscillator</category><category>sho</category><guid>http://blog.albertotorin.it/blog/energy-fd-sho/</guid><pubDate>Sat, 12 Nov 2016 14:00:00 GMT</pubDate></item></channel></rss>

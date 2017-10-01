@@ -43,7 +43,11 @@
  </url>
  <url>
   <loc>http://blog.albertotorin.it/categories/</loc>
-  <lastmod>2017-03-26T17:20:00Z</lastmod>
+  <lastmod>2017-10-01T20:27:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.albertotorin.it/categories/energy/</loc>
+  <lastmod>2017-10-01T20:27:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.albertotorin.it/categories/finite-difference/</loc>
@@ -64,6 +68,10 @@
  <url>
   <loc>http://blog.albertotorin.it/categories/modal/</loc>
   <lastmod>2017-03-26T17:20:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.albertotorin.it/categories/oscillator/</loc>
+  <lastmod>2017-10-01T20:25:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.albertotorin.it/categories/sho/</loc>
