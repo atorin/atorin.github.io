@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>Sound synthesis of multiple degree-of-freedom systems | Casual perambulations</title>
+<title>Sound synthesis of multiple degree-of-freedom systems in Matlab: Modal and finite different approach | Casual perambulations</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
@@ -26,7 +26,7 @@ MathJax.Hub.Config({
 </script><!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Alberto Torin">
 <link rel="prev" href="../mdof-systems/" title="Multiple degree-of-freedom systems and ideal strings" type="text/html">
 <meta property="og:site_name" content="Casual perambulations">
-<meta property="og:title" content="Sound synthesis of multiple degree-of-freedom systems">
+<meta property="og:title" content="Sound synthesis of multiple degree-of-freedom systems in Matlab: Modal">
 <meta property="og:url" content="http://blog.albertotorin.it/blog/mdof-sound-synthesis/">
 <meta property="og:description" content="This post is adapted from a lecture I gave on multiple degree-of-freedom systems (arrays of masses and springs) and their connection with ideal strings. Part 1 is presented in a previous post, and dea">
 <meta property="og:type" content="article">
@@ -36,7 +36,8 @@ MathJax.Hub.Config({
 <meta property="article:tag" content="matlab">
 <meta property="article:tag" content="modal">
 <meta property="article:tag" content="sho">
-<meta property="article:tag" content="sound synthesis tutorial">
+<meta property="article:tag" content="sound synthesis">
+<meta property="article:tag" content="tutorial">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -57,7 +58,7 @@ MathJax.Hub.Config({
                 <li><a href="../../rss.xml">RSS feed</a></li>
     
     
-    </ul></nav></header><main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Sound synthesis of multiple degree-of-freedom systems</a></h1>
+    </ul></nav></header><main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Sound synthesis of multiple degree-of-freedom systems in Matlab: Modal and finite different approach</a></h1>
 
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
@@ -80,7 +81,7 @@ MathJax.Hub.Config({
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>This post is adapted from a <a href="https://github.com/atorin/Dynamics3-Lecture">lecture</a> I gave on multiple degree-of-freedom systems (arrays of masses and springs) and their connection with ideal strings. Part 1 is presented in a previous <a href="http://blog.albertotorin.it/blog/mdof-systems/">post</a>, and deals with the nitty-gritty of the theory.</p>
-<p>Here, the emphasis is given to sound synthesis applications of the mass-spring system. I will explore two simple examples of physical modelling sound synthesis, namely the modal and finite difference methods, and present two basic codes that produce sounds in this way.</p>
+<p>Here, the emphasis is given to sound synthesis applications of the mass-spring system. I will explore two simple examples of physical modelling sound synthesis, namely the modal and finite difference methods, and present <a href="https://github.com/atorin/Dynamics3-Lecture">two basic codes</a> that produce sounds in this way.</p>
 <!-- TEASER_END -->
 </div>
 </div>
@@ -99,7 +100,7 @@ $$M \ddot{\vec{u}} = - K \vec{u},$$<p>where $\vec{u}$ is the vector of the displ
 <h4 id="How-does-this-system-sound-like?">How does this system sound like?<a class="anchor-link" href="#How-does-this-system-sound-like?">¶</a>
 </h4>
 <p>Vibration is sound, at least as long as it is in the human hearing range! So, we can look at the motion of one of the masses subject to some initial conditions and listen to its vibration signal...</p>
-<p>This strikingly simple observation is at the basis of a wide range of sound synthesis techniques, which have been adopted at least since the 1950s.</p>
+<p>This strikingly simple observation is at the basis of a wide range of sound synthesis techniques, which have been adopted at least since the 1950s. What we are dealing with here is a subset of these techniques, called <a href="https://en.wikipedia.org/wiki/Physical_modelling_synthesis">physical modelling synthesis</a>.</p>
 
 </div>
 </div>
@@ -111,7 +112,7 @@ $$M \ddot{\vec{u}} = - K \vec{u},$$<p>where $\vec{u}$ is the vector of the displ
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Modal-sound-synthesis">Modal sound synthesis<a class="anchor-link" href="#Modal-sound-synthesis">¶</a>
 </h3>
-<p>The idea behind this method is to decompose the behaviour of the system at hand into various "modes". Each of these vibrates independently of the others (at least in the linear case), and their individual contributions can be summed to obtain the final vibration of the object.</p>
+<p>The idea behind <a href="http://support.ircam.fr/docs/Modalys/3.4.0/co/Introduction.html">modal synthesis</a> is to decompose the behaviour of the system at hand into various "modes". Each of these vibrates independently of the others (at least in the linear case), and their individual contributions can be summed to obtain the final vibration of the object.</p>
 <p>Obviously, when the system is discrete there is only a finite number of modes. Real world objects, however, when described by continuous equations, have an infinite number of modes... In this case, only the modes whose frequency lies within the human hearing range need be considered.</p>
 <p>Now, let's go back to the mass-spring system after this brief introduction. The global solution to the equations of motion can be written as a linear combination of the $N$ solutions to the eigenvalue problem for the system:</p>
 $$ \vec{u}(t) = \sum_1^N A_j \, \vec{U_j} \, sin(\Omega_j t + \phi_j).  $$<p></p>
@@ -282,9 +283,9 @@ $$\Omega^2 \vec{U} = \omega^2 D \vec{U} \quad \text{and} \quad \Omega = \omega \
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-octave"><pre><span></span><span class="n">omega</span> <span class="p">=</span> <span class="mi">2</span><span class="o">*</span><span class="nb">pi</span><span class="o">*</span><span class="mi">440</span><span class="p">;</span>
-<span class="n">A</span> <span class="p">=</span> <span class="nb">rand</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
-<span class="c">% A = (50:-1:1)'/50;</span>
-<span class="c">% A = (((1:50)-25).^2/25^2)';</span>
+<span class="n">A</span> <span class="p">=</span> <span class="nb">rand</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>   <span class="c">% random</span>
+<span class="c">% A = (50:-1:1)'/50;   % linear</span>
+<span class="c">% A = (((1:50)-25).^2/25^2)';   % parabolic</span>
 <span class="n">phi</span> <span class="p">=</span> <span class="nb">zeros</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
 </pre></div>
 
@@ -330,7 +331,7 @@ $$\Omega^2 \vec{U} = \omega^2 D \vec{U} \quad \text{and} \quad \Omega = \omega \
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Choose the mass you want to calculate the displacement of.</p>
+<p>Choose the mass you want to calculate the displacement of. Let's say point 23...</p>
 
 </div>
 </div>
@@ -533,7 +534,8 @@ $$ M \frac{\vec{u}^{ n+1} - 2\vec{u}^{ n} + \vec{u}^{ n-1}}{k^2} = - K \vec{u}^n
             <li><a class="tag p-category" href="../../categories/matlab/" rel="tag">matlab</a></li>
             <li><a class="tag p-category" href="../../categories/modal/" rel="tag">modal</a></li>
             <li><a class="tag p-category" href="../../categories/sho/" rel="tag">sho</a></li>
-            <li><a class="tag p-category" href="../../categories/sound-synthesis-tutorial/" rel="tag">sound synthesis tutorial</a></li>
+            <li><a class="tag p-category" href="../../categories/sound-synthesis/" rel="tag">sound synthesis</a></li>
+            <li><a class="tag p-category" href="../../categories/tutorial/" rel="tag">tutorial</a></li>
         </ul>
 <ul class="pager hidden-print">
 <li class="previous">
