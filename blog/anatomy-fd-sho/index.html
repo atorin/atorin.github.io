@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     }
 });
 </script><!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Alberto Torin">
-<link rel="next" href="../energy-fd-sho/" title="Energy conservation in a finite difference simulation of an SHO" type="text/html">
+<link rel="next" href="../energy-fd-sho/" title="Energy conservation in a finite difference simulation of a simple harmonic oscillator" type="text/html">
 <meta property="og:site_name" content="Casual perambulations">
 <meta property="og:title" content="Anatomy of a finite difference scheme: How to simulate a simple harmon">
 <meta property="og:url" content="http://blog.albertotorin.it/blog/anatomy-fd-sho/">
@@ -78,7 +78,7 @@ MathJax.Hub.Config({
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In this post, I will try to analyse a finite difference simulation of a simple harmonic oscillator (SHO) with damping, and code the algorithm using the programming language Julia. If you are not familiar with Julia, I recommend you visit this website: <a href="http://www.julialang.org">http://www.julialang.org</a>.</p>
+<p>In this post, I will try to analyse a finite difference simulation of a <a href="https://en.wikipedia.org/wiki/Simple_harmonic_motion">simple harmonic oscillator (SHO) with damping</a>, and code the algorithm using the programming language Julia. If you are not familiar with Julia, I recommend you visit this website: <a href="http://www.julialang.org">http://www.julialang.org</a>.</p>
 <p>As you probably know, the equation for an SHO is the following:</p>
 
 </div>
@@ -117,7 +117,7 @@ $$u(0) = u_0, \qquad \text{ and } \qquad \frac{du}{dt}\Bigr|_{t=0} = v_0.$$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A finite difference implementation of this equation requires the discretisation of time in integer multiples of $k$, the time step. Let $u^n$ denote the discrete approximation to $u(t)$ calculated at the discrete time $nk$, with $n$ positive integer. Given the initial values $u^0$ and $u^1$, the idea is to find a recursion that gives $u^2, \dots, u^n$ in a way that is consistent with the continuous equation. Many different schemes are available, which present different properties. One possibility is the following:</p>
+<p>A <a href="https://en.wikipedia.org/wiki/Finite_difference_method">finite difference</a> implementation of this equation requires the discretisation of time in integer multiples of $k$, the time step. Let $u^n$ denote the discrete approximation to $u(t)$ calculated at the discrete time $nk$, with $n$ positive integer. Given the initial values $u^0$ and $u^1$, the idea is to find a recursion that gives $u^2, \dots, u^n$ in a way that is consistent with the continuous equation. Many different schemes are available, which present different properties. One possibility is the following:</p>
 <!-- TEASER_END -->
 </div>
 </div>
@@ -454,7 +454,7 @@ $$u^0 = u_0, \qquad \text{ and } \qquad \frac{u^1-u^0}{k} = v_0.$$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now we can play around with this function, and plot a graph.</p>
+<p>Now we can play around with this function, and plot a graph. You can see the oscillation with an exponentially decaying profile.</p>
 
 </div>
 </div>
@@ -1659,8 +1659,8 @@ fig.select("#img-c204e4be-16")
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="See-also">See also<a class="anchor-link" href="#See-also">¶</a>
-</h4>
+<p>Feel free to download this code from my <a href="https://github.com/atorin/FiniteDifferenceSchemes">Github profile</a> and to play around with it.</p>
+
 </div>
 </div>
 </div>
@@ -1669,6 +1669,8 @@ fig.select("#img-c204e4be-16")
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="See-also">See also<a class="anchor-link" href="#See-also">¶</a>
+</h4>
 <p>S. Bilbao, <em>Numerical Sound Synthesis</em>, John Wiley &amp; Sons, Chichester, UK, 2009</p>
 
 </div>
@@ -1687,7 +1689,7 @@ fig.select("#img-c204e4be-16")
         </ul>
 <ul class="pager hidden-print">
 <li class="next">
-                <a href="../energy-fd-sho/" rel="next" title="Energy conservation in a finite difference simulation of an SHO">Next post</a>
+                <a href="../energy-fd-sho/" rel="next" title="Energy conservation in a finite difference simulation of a simple harmonic oscillator">Next post</a>
             </li>
         </ul></nav></aside><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({

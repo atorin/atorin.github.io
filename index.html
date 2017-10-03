@@ -166,7 +166,7 @@ $$ H(t) = \frac{M}{2} \left( \frac{du}{dt} \right)^2 + \frac{K}{2} u^2, \qquad \
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In this post, I will try to analyse a finite difference simulation of a simple harmonic oscillator (SHO) with damping, and code the algorithm using the programming language Julia. If you are not familiar with Julia, I recommend you visit this website: <a href="http://www.julialang.org">http://www.julialang.org</a>.</p>
+<p>In this post, I will try to analyse a finite difference simulation of a <a href="https://en.wikipedia.org/wiki/Simple_harmonic_motion">simple harmonic oscillator (SHO) with damping</a>, and code the algorithm using the programming language Julia. If you are not familiar with Julia, I recommend you visit this website: <a href="http://www.julialang.org">http://www.julialang.org</a>.</p>
 <p>As you probably know, the equation for an SHO is the following:</p>
 
 </div>
@@ -205,7 +205,7 @@ $$u(0) = u_0, \qquad \text{ and } \qquad \frac{du}{dt}\Bigr|_{t=0} = v_0.$$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A finite difference implementation of this equation requires the discretisation of time in integer multiples of $k$, the time step. Let $u^n$ denote the discrete approximation to $u(t)$ calculated at the discrete time $nk$, with $n$ positive integer. Given the initial values $u^0$ and $u^1$, the idea is to find a recursion that gives $u^2, \dots, u^n$ in a way that is consistent with the continuous equation. Many different schemes are available, which present different properties. One possibility is the following:</p>
+<p>A <a href="https://en.wikipedia.org/wiki/Finite_difference_method">finite difference</a> implementation of this equation requires the discretisation of time in integer multiples of $k$, the time step. Let $u^n$ denote the discrete approximation to $u(t)$ calculated at the discrete time $nk$, with $n$ positive integer. Given the initial values $u^0$ and $u^1$, the idea is to find a recursion that gives $u^2, \dots, u^n$ in a way that is consistent with the continuous equation. Many different schemes are available, which present different properties. One possibility is the following:</p>
 <p class="more"><a href="blog/anatomy-fd-sho/">Read more…</a></p>
 </div>
 </div>
