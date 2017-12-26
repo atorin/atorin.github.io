@@ -6,12 +6,16 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
+  <loc>http://blog.albertotorin.it/categories/cat-tools.xml</loc>
+  <lastmod>2017-12-26T16:39:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>http://blog.albertotorin.it/categories/energy.xml</loc>
   <lastmod>2017-10-07T19:48:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.albertotorin.it/categories/finite-difference.xml</loc>
-  <lastmod>2017-10-07T19:48:00Z</lastmod>
+  <lastmod>2017-10-07T20:00:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.albertotorin.it/categories/julia.xml</loc>
@@ -19,7 +23,7 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.albertotorin.it/categories/jupyter.xml</loc>
-  <lastmod>2017-10-07T19:48:00Z</lastmod>
+  <lastmod>2017-10-07T20:00:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.albertotorin.it/categories/matlab.xml</loc>
@@ -30,16 +34,20 @@
   <lastmod>2017-10-03T20:01:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>http://blog.albertotorin.it/categories/omegat.xml</loc>
+  <lastmod>2017-12-26T16:39:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>http://blog.albertotorin.it/categories/oscillator.xml</loc>
   <lastmod>2017-10-07T19:48:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.albertotorin.it/categories/python.xml</loc>
-  <lastmod>2017-10-07T19:48:00Z</lastmod>
+  <lastmod>2017-10-07T20:00:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.albertotorin.it/categories/sho.xml</loc>
-  <lastmod>2017-10-07T19:48:00Z</lastmod>
+  <lastmod>2017-10-07T20:00:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.albertotorin.it/categories/sound-synthesis-tutorial.xml</loc>
@@ -54,6 +62,10 @@
   <lastmod>2017-10-01T20:52:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>http://blog.albertotorin.it/categories/translation.xml</loc>
+  <lastmod>2017-12-26T16:39:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>http://blog.albertotorin.it/categories/tutorial.xml</loc>
   <lastmod>2017-10-03T20:01:00Z</lastmod>
  </sitemap>
@@ -63,10 +75,10 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.albertotorin.it/rss.xml</loc>
-  <lastmod>2017-10-07T19:48:00Z</lastmod>
+  <lastmod>2017-12-26T16:39:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.albertotorin.it/sitemap.xml</loc>
-  <lastmod>2017-10-07T19:48:00Z</lastmod>
+  <lastmod>2017-12-26T16:39:00Z</lastmod>
  </sitemap>
 </sitemapindex>

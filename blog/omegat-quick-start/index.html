@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>How to translate a document or review a translation with OmegaT | Casual perambulations</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="http://blog.albertotorin.it/blog/omegat-quick-start/">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'center' to center equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Alberto Torin">
+<link rel="prev" href="../sho-python/" title="Finite difference simulation of a simple harmonic oscillator in Python" type="text/html">
+<meta property="og:site_name" content="Casual perambulations">
+<meta property="og:title" content="How to translate a document or review a translation with OmegaT">
+<meta property="og:url" content="http://blog.albertotorin.it/blog/omegat-quick-start/">
+<meta property="og:description" content="You want to translate a document or you're given someone else's translation to review. You also want to do it like a pro, i.e., using a professional CAT tool.
+Then, you're best option is probably Omeg">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2017-12-26T15:00:00+01:00">
+<meta property="article:tag" content="cat tools">
+<meta property="article:tag" content="omegat">
+<meta property="article:tag" content="translation">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div id="container">
+         
+    <header id="header"><h1 id="brand"><a href="http://blog.albertotorin.it/" title="Casual perambulations" rel="home">
+
+        <span id="blog-title">Casual perambulations</span>
+    </a></h1>
+
+        
+
+        
+    <nav id="menu"><ul>
+<li><a href="../../about">About</a></li>
+                <li><a href="../../archive.html">Archive</a></li>
+                <li><a href="../../categories/">Tags</a></li>
+                <li><a href="../../rss.xml">RSS feed</a></li>
+    
+    
+    </ul></nav></header><main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">How to translate a document or review a translation with OmegaT</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                    Alberto Torin
+            </span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2017-12-26T15:00:00+01:00" itemprop="datePublished" title="2017-12-26 15:00">2017-12-26 15:00</time></a></p>
+            
+        <p class="sourceline"><a href="index.rst" id="sourcelink">Source</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>You want to translate a document or you're given someone else's translation to review. You also want to do it like a pro, i.e., using a professional <a class="reference external" href="https://en.wikipedia.org/wiki/Computer-assisted_translation">CAT tool</a>.</p>
+<p>Then, you're best option is probably <a class="reference external" href="http://omegat.org/">OmegaT</a>. OmegaT is a translation memory application that has, in my opinion, two main advantages over its competitors:</p>
+<ol class="arabic simple">
+<li>It's free and open-source,</li>
+<li>It runs on Windows, Mac and Linux (actually, any system where the Java Runtime Environment can be installed).</li>
+</ol>
+<p>I found myself in this situation recently, so I'll give you a brief account based on my experience on how to import, translate and review translations for plain text files.</p>
+<!-- TEASER_END -->
+<p>But first things first...</p>
+<div class="section" id="install-omegat">
+<h2>Install OmegaT</h2>
+<p>To get your copy of the program, head to <a class="reference external" href="http://omegat.org/download">download web page</a> and choose the link according to your operating system. Make sure you scroll down and choose the latest version (&gt; 4.1), as some options are not present in the previous versions.</p>
+</div>
+<div class="section" id="create-a-project">
+<h2>Create a project</h2>
+<p>Once you have OmegaT installed, you might want to start your translation. First, however, you need to <strong>create a project</strong>. A project is basically a folder where all the files of your translation will be contained.</p>
+<p>Here's my recipe:</p>
+<ol class="arabic simple">
+<li>Go to <strong>Project</strong>, then <strong>New</strong>,</li>
+<li>Choose a name and place for your project,</li>
+<li>In the Create New Project window, select the source and target languages.
+Leave everything else as default for the moment.</li>
+</ol>
+<p>You should have an empty folder where you can start working. Now,</p>
+<ol class="arabic simple" start="4">
+<li>Copy the file(s) you want to translate inside the <cite>project-name/source</cite>    folder. Then, hit the F5 button to refresh the project.</li>
+</ol>
+<p>In the OmegaT website, you can find the <a class="reference external" href="http://omegat.org/howtos/compatibility">full list of compatible files</a>. Bear in mind, however, that if a file is not directly supported, that doesn't mean that it cannot be translated. In my case, I was working with Markdown .md files, which are not recognised by default. But there's an easy fix for this, see below.</p>
+</div>
+<div class="section" id="translating">
+<h2>Translating</h2>
+<p>At this point, you will probably see the file you want to translate in the editor window. Under <strong>View</strong>, I suggest you check "Mark Translated Segments" and "Mark Untranslated Segments", to visually see what's left to translate.</p>
+<p>OmegaT will divide the document for you, creating different segments at the sentence level. This has several advantages, the first being that you can concentrate on a single phrase at the time, without the risk of losing parts of the text.</p>
+<p>Translate a sentence, then move on to the next by pressing Enter. You can also move to the previous or next segments with Cmd+P or Cmd+N (Control on Windows).</p>
+<p>Once you have finished and are happy enough with your translation, you can <strong>export the result</strong> by going to <strong>Project</strong> &gt; <strong>Create Translated Documents</strong>, or Cmd+D. You can find your translation inside the <cite>target</cite> folder in your project directory.</p>
+</div>
+<div class="section" id="reviewing-a-translation">
+<h2>Reviewing a translation</h2>
+<p>Suppose now that someone else translated the document, and you're given the task to do a review or post-edit it. You then have the original source file, plus the translation file.</p>
+<p>Start by placing the source file in the <cite>source</cite> folder, as explained above. Then, you will use the translation file to create a <strong>translation memory</strong>, i.e., a one-to-one correspondence between the segments of the source and target file.</p>
+<ol class="arabic simple" start="5">
+<li>Go to <strong>Tools</strong> &gt; <strong>Align Files...</strong> (Note: this option is not present in previous versions of OmegaT!)</li>
+<li>Under Target, press <strong>Browse</strong> and select the translation you want to review, then <strong>OK</strong>
+</li>
+<li>A new window will appear, giving you the option to select the segments of interest. Select all that are needed. It will also show you how the source is mapped to the target. If you don't need the fancy options on the bottom, click on <strong>Continue</strong>.</li>
+<li>In this last window, you will need to manually adjust the alignment, if needed. Sometimes, different segments are mapped incorrectly to the target, and you are given the option to correct mistakes here. I have to say, the matching algorithm is quite accurate, so you probably won't need this. When you are finished, save the translation memory with <strong>Save TMX</strong>. You should place it inside the <cite>tm/auto</cite> folder. This will automatically pre-populate the translation with the file you need to review.</li>
+<li>Once you saved the translation memory, close the tab and hit F5. Your translation will be populated with the segments from the file you need to review. Go through each segment and confirm or edit it as needed.</li>
+<li>Once you're finished, export the reviewed translation and look into the <cite>target</cite> folder.</li>
+</ol>
+</div>
+<div class="section" id="handling-uncommon-file-extensions">
+<h2>Handling uncommon file extensions</h2>
+<p>As I mentioned before, Markdown files (as well as .rst and others) are not supported by default on OmegaT. If you try to import them, the program simply does not recognise them.</p>
+<p>However, as you know these are just plain text files. With a simple procedure, you can include these in the supported documents.</p>
+<ol class="arabic simple">
+<li>Go to <strong>Preferences</strong> &gt; <strong>File filters</strong>
+</li>
+<li>Then, select "Text" and click on <strong>Edit</strong>
+</li>
+<li>Click on <strong>Add</strong>, then specify the Source Filename Pattern by typing in the right extension. You can leave everything else as default. Then, click <strong>OK</strong>
+</li>
+</ol>
+<p>You should now be able to import other types of plain texts into OmegaT.</p>
+</div>
+<div class="section" id="final-comments">
+<h2>Final comments</h2>
+<p>At first, this process might seem rather cumbersome. Why do I need a project folder, with many sub-folders, only to translate a single document? Many reasons are listed in <a class="reference external" href="http://www.web-translations.com/blog/use-cat-tools/">this post</a>, but I'll give you my two pence anyway:</p>
+<ul class="simple">
+<li>Accuracy: you won't forget to translate or review a segment,</li>
+<li>Consistency: repetitions are handled inside the program, so that you won't translate the same sentence in different ways.</li>
+<li>Speed: having to go back and forth between different documents is time consuming. Having the source and translated segments side by side helps speeding up the process tremendously.</li>
+</ul>
+<p>If you have comments or found this post useful, feel free to <a class="reference external" href="https://twitter.com/intent/tweet?screen_name=_atorin">reach out</a>.</p>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/cat-tools/" rel="tag">cat tools</a></li>
+            <li><a class="tag p-category" href="../../categories/omegat/" rel="tag">omegat</a></li>
+            <li><a class="tag p-category" href="../../categories/translation/" rel="tag">translation</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../sho-python/" rel="prev" title="Finite difference simulation of a simple harmonic oscillator in Python">Previous post</a>
+            </li>
+        </ul></nav></aside></article></main><footer id="footer"><p>Contents © 2017         <a href="mailto:info@albertotorin.it">Alberto Torin</a>   under Creative Commons BY 
+<a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+<img alt="Creative Commons License BY" style="border-width:0; margin-bottom:0px;" src="https://i.creativecommons.org/l/by/4.0/80x15.png"></a>    -   Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>        </p>
+            
+        </footer>
+</div>
+    
+    
+
+    
+    
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	
+	  ga('create', 'UA-72512940-4', 'auto');
+	  ga('send', 'pageview');
+	
+	</script>
+</body>
+</html>
