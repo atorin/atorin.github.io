@@ -46,6 +46,10 @@
   <lastmod>2017-10-07T20:00:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>http://blog.albertotorin.it/categories/rst.xml</loc>
+  <lastmod>2018-03-17T20:50:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>http://blog.albertotorin.it/categories/sho.xml</loc>
   <lastmod>2017-10-07T20:00:00Z</lastmod>
  </sitemap>
@@ -56,6 +60,10 @@
  <sitemap>
   <loc>http://blog.albertotorin.it/categories/sound-synthesis.xml</loc>
   <lastmod>2017-10-03T20:01:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://blog.albertotorin.it/categories/sphinx.xml</loc>
+  <lastmod>2018-03-17T20:50:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.albertotorin.it/categories/string.xml</loc>
@@ -71,14 +79,14 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.albertotorin.it/galleries/rss.xml</loc>
-  <lastmod>2017-03-19T10:46:00Z</lastmod>
+  <lastmod>2018-03-17T20:49:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.albertotorin.it/rss.xml</loc>
-  <lastmod>2017-12-26T16:39:00Z</lastmod>
+  <lastmod>2018-03-17T20:50:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.albertotorin.it/sitemap.xml</loc>
-  <lastmod>2017-12-26T16:39:00Z</lastmod>
+  <lastmod>2018-03-17T20:50:00Z</lastmod>
  </sitemap>
 </sitemapindex>

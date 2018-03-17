@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content='"A few tricks and hacks with RST documents and Sphinx"'>
+<meta name="viewport" content="width=device-width">
+<title>Some tricks and hacks with Sphinx | Casual perambulations</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="http://blog.albertotorin.it/blog/sphinx-tricks-and-hacks/">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'center' to center equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="description" content='"A few tricks and hacks with RST documents and Sphinx"'>
+<meta name="author" content="Alberto Torin">
+<link rel="prev" href="../omegat-quick-start/" title="How to translate a document or review a translation with OmegaT" type="text/html">
+<meta property="og:site_name" content="Casual perambulations">
+<meta property="og:title" content="Some tricks and hacks with Sphinx">
+<meta property="og:url" content="http://blog.albertotorin.it/blog/sphinx-tricks-and-hacks/">
+<meta property="og:description" content='"A few tricks and hacks with RST documents and Sphinx"'>
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2018-03-17T15:00:00+01:00">
+<meta property="article:tag" content="rst">
+<meta property="article:tag" content="sphinx">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div id="container">
+         
+    <header id="header"><h1 id="brand"><a href="http://blog.albertotorin.it/" title="Casual perambulations" rel="home">
+
+        <span id="blog-title">Casual perambulations</span>
+    </a></h1>
+
+        
+
+        
+    <nav id="menu"><ul>
+<li><a href="../../about">About</a></li>
+                <li><a href="../../archive.html">Archive</a></li>
+                <li><a href="../../categories/">Tags</a></li>
+                <li><a href="../../rss.xml">RSS feed</a></li>
+    
+    
+    </ul></nav></header><main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Some tricks and hacks with Sphinx</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                    Alberto Torin
+            </span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2018-03-17T15:00:00+01:00" itemprop="datePublished" title="2018-03-17 15:00">2018-03-17 15:00</time></a></p>
+            
+        <p class="sourceline"><a href="index.rst" id="sourcelink">Source</a></p>
+
+                <meta name="description" itemprop="description" content='"A few tricks and hacks with RST documents and Sphinx"'>
+</div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>This is a (hopefully!) growing collection of tricks and hacks that I have come across working with <a class="reference external" href="http://docutils.sourceforge.net/rst.html">RST documents</a>, <a class="reference external" href="http://www.sphinx-doc.org/">Sphinx</a> and <a class="reference external" href="http://readthedocs.org">Read the Docs</a>.</p>
+<!-- TEASER_END -->
+<div class="section" id="vim-and-rst">
+<h2>Vim and RST</h2>
+<p>I love Vim (actually, MacVim), and as soon as I started working with RST documents for the first time, I hoped to find a nice plug-in to speed up my editing.</p>
+<p>Of course, someone had already thought about that... Enter Riv!</p>
+<p><a class="reference external" href="https://github.com/gu-fan/riv.vim">Riv</a> is a great plug-in, with many shortcuts to make your life easier when dealing with RST files. In my opinion, the best thing about Riv is how it handles table creation. You create cells by simply pressing tab, and when you modify the content, the table automatically reshapes when you exit the edit mode.</p>
+<p>If you try Riv, don't forget to install <a class="reference external" href="https://github.com/gu-fan/InstantRst">InstantRst</a> as well. This will enable a live preview in the browser, as you edit your document.</p>
+</div>
+<div class="section" id="tables-in-sphinx">
+<h2>Tables in Sphinx</h2>
+<p>Tables in Sphinx can be a very frustrating thing. Sometimes you have a large table that is difficult to render with the RST syntax; in other cases, the table looks good in the HTML page but awful in the PDF output.</p>
+<p>For those cases, I have created a <a class="reference external" href="http://http://tables-with-sphinx.readthedocs.io/">short tutorial about tables with Sphinx</a>.</p>
+<p>One of the best options, in my option, is to work with CSV tables. You can create your table in a spreadsheet, without the need to worry about the proper formatting in RST.
+To take care of the PDF output for those long tables that won't fit on a single page, you can use the <code>longtable</code> class. Then, with the <code>tabularcolumns</code> directive, you can control the width of the columns in your PDF.</p>
+<p>This is a sample code snippet to render a table from a CSV file. Check the result in the <a class="reference external" href="http://tables-with-sphinx.readthedocs.io/en/latest/csv-table.html">tutorial</a>.</p>
+<pre class="code rst"><a name="rest_code_82dacc12bfa4467397cfcd45befc9c7a-1"></a><span class="p">..</span> <span class="ow">tabularcolumns</span><span class="p">::</span> |p{1cm}|p{7cm}|
+<a name="rest_code_82dacc12bfa4467397cfcd45befc9c7a-2"></a>
+<a name="rest_code_82dacc12bfa4467397cfcd45befc9c7a-3"></a><span class="p">..</span> <span class="ow">csv-table</span><span class="p">::</span> Caption of the figure
+<a name="rest_code_82dacc12bfa4467397cfcd45befc9c7a-4"></a>   <span class="nc">:file:</span> <span class="nf">path-to-the/file.csv</span>
+<a name="rest_code_82dacc12bfa4467397cfcd45befc9c7a-5"></a>   <span class="nc">:header-rows:</span> <span class="nf">1</span>
+<a name="rest_code_82dacc12bfa4467397cfcd45befc9c7a-6"></a>   <span class="nc">:class:</span> <span class="nf">longtable</span>
+<a name="rest_code_82dacc12bfa4467397cfcd45befc9c7a-7"></a>   <span class="nc">:widths:</span> <span class="nf">1 1</span>
+</pre>
+<p>This approach also works if you use a <a class="reference external" href="http://www.sphinx-doc.org/en/master/rest.html#tables">grid table</a> instead of a CSV table, with the proper changes.</p>
+<div class="section" id="convert-html-tables-to-rst">
+<h3>Convert HTML tables to RST</h3>
+<p>Speaking of tables, if you start from a table in HTML, you can use <a class="reference external" href="https://github.com/doakey3/DashTable">DashTable</a> to convert it to RST. This tool will produce for you a nice grid table that you can easily copy and paste in your RST document.</p>
+</div>
+</div>
+<div class="section" id="break-numbered-lists">
+<h2>Break numbered lists</h2>
+<p>Whenever you start a line with <code>1. Something...</code>, Sphinx produces a numbered list. Sometimes, however, this is not the behaviour you would like to achieve.</p>
+<p>To break the numbered list, you can just add a backslash after the number, like this: <code>1\. Something...</code>. This is enough for Sphinx to treat the line as a normal sentence.</p>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/rst/" rel="tag">rst</a></li>
+            <li><a class="tag p-category" href="../../categories/sphinx/" rel="tag">sphinx</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../omegat-quick-start/" rel="prev" title="How to translate a document or review a translation with OmegaT">Previous post</a>
+            </li>
+        </ul></nav></aside></article></main><footer id="footer"><p>Contents © 2018         <a href="mailto:info@albertotorin.it">Alberto Torin</a>   under Creative Commons BY 
+<a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+<img alt="Creative Commons License BY" style="border-width:0; margin-bottom:0px;" src="https://i.creativecommons.org/l/by/4.0/80x15.png"></a>    -   Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>        </p>
+            
+        </footer>
+</div>
+    
+    
+
+    
+    
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	
+	  ga('create', 'UA-72512940-4', 'auto');
+	  ga('send', 'pageview');
+	
+	</script>
+</body>
+</html>

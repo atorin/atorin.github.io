@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://blog.albertotorin.it/</loc>
-  <lastmod>2017-03-24T21:50:00Z</lastmod>
+  <lastmod>2018-03-17T20:50:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.albertotorin.it/2016/</loc>
@@ -18,12 +18,16 @@
   <lastmod>2017-03-24T21:18:00Z</lastmod>
  </url>
  <url>
+  <loc>http://blog.albertotorin.it/2018/</loc>
+  <lastmod>2018-03-17T20:50:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://blog.albertotorin.it/about/</loc>
   <lastmod>2017-02-19T16:07:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.albertotorin.it/archive.html</loc>
-  <lastmod>2017-12-26T16:05:00Z</lastmod>
+  <lastmod>2018-03-17T20:50:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.albertotorin.it/blog/anatomy-fd-sho/</loc>
@@ -50,8 +54,12 @@
   <lastmod>2017-10-07T19:48:00Z</lastmod>
  </url>
  <url>
+  <loc>http://blog.albertotorin.it/blog/sphinx-tricks-and-hacks/</loc>
+  <lastmod>2018-03-17T20:50:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://blog.albertotorin.it/categories/</loc>
-  <lastmod>2017-12-26T16:39:00Z</lastmod>
+  <lastmod>2018-03-17T20:50:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.albertotorin.it/categories/cat-tools/</loc>
@@ -94,6 +102,10 @@
   <lastmod>2017-10-07T19:48:00Z</lastmod>
  </url>
  <url>
+  <loc>http://blog.albertotorin.it/categories/rst/</loc>
+  <lastmod>2018-03-17T20:50:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://blog.albertotorin.it/categories/sho/</loc>
   <lastmod>2016-09-22T16:59:00Z</lastmod>
  </url>
@@ -104,6 +116,10 @@
  <url>
   <loc>http://blog.albertotorin.it/categories/sound-synthesis/</loc>
   <lastmod>2017-10-03T20:01:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.albertotorin.it/categories/sphinx/</loc>
+  <lastmod>2018-03-17T20:50:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.albertotorin.it/categories/string/</loc>
