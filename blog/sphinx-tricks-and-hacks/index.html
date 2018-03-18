@@ -78,6 +78,18 @@ MathJax.Hub.Config({
 <p>I love Vim (actually, MacVim), and as soon as I started working with RST documents for the first time, I hoped to find a nice plug-in to speed up my editing.</p>
 <p>Of course, someone had already thought about that... Enter Riv!</p>
 <p><a class="reference external" href="https://github.com/gu-fan/riv.vim">Riv</a> is a great plug-in, with many shortcuts to make your life easier when dealing with RST files. In my opinion, the best thing about Riv is how it handles table creation. You create cells by simply pressing tab, and when you modify the content, the table automatically reshapes when you exit the edit mode.</p>
+<p>A few shortcuts for you:</p>
+<ul class="simple">
+<li>
+<code>tab</code>: move to the next cell</li>
+<li>
+<code>option + enter</code>: create the header row</li>
+<li>
+<code>control + enter</code>: create a new regular row</li>
+</ul>
+<div class="figure align-center">
+<img alt="Create RST tables with Riv plug-in for MacVim" src="http://www.albertotorin.it/blog-files/rst-tables-with-riv.gif" style="width: 600px;"><p class="caption">Create tables with Riv.</p>
+</div>
 <p>If you try Riv, don't forget to install <a class="reference external" href="https://github.com/gu-fan/InstantRst">InstantRst</a> as well. This will enable a live preview in the browser, as you edit your document.</p>
 </div>
 <div class="section" id="tables-in-sphinx">
@@ -87,13 +99,13 @@ MathJax.Hub.Config({
 <p>One of the best options, in my option, is to work with CSV tables. You can create your table in a spreadsheet, without the need to worry about the proper formatting in RST.
 To take care of the PDF output for those long tables that won't fit on a single page, you can use the <code>longtable</code> class. Then, with the <code>tabularcolumns</code> directive, you can control the width of the columns in your PDF.</p>
 <p>This is a sample code snippet to render a table from a CSV file. Check the result in the <a class="reference external" href="http://tables-with-sphinx.readthedocs.io/en/latest/csv-table.html">tutorial</a>.</p>
-<pre class="code rst"><a name="rest_code_82dacc12bfa4467397cfcd45befc9c7a-1"></a><span class="p">..</span> <span class="ow">tabularcolumns</span><span class="p">::</span> |p{1cm}|p{7cm}|
-<a name="rest_code_82dacc12bfa4467397cfcd45befc9c7a-2"></a>
-<a name="rest_code_82dacc12bfa4467397cfcd45befc9c7a-3"></a><span class="p">..</span> <span class="ow">csv-table</span><span class="p">::</span> Caption of the figure
-<a name="rest_code_82dacc12bfa4467397cfcd45befc9c7a-4"></a>   <span class="nc">:file:</span> <span class="nf">path-to-the/file.csv</span>
-<a name="rest_code_82dacc12bfa4467397cfcd45befc9c7a-5"></a>   <span class="nc">:header-rows:</span> <span class="nf">1</span>
-<a name="rest_code_82dacc12bfa4467397cfcd45befc9c7a-6"></a>   <span class="nc">:class:</span> <span class="nf">longtable</span>
-<a name="rest_code_82dacc12bfa4467397cfcd45befc9c7a-7"></a>   <span class="nc">:widths:</span> <span class="nf">1 1</span>
+<pre class="code rst"><a name="rest_code_62f8314b8a154066adcd2c23f94c7c04-1"></a><span class="p">..</span> <span class="ow">tabularcolumns</span><span class="p">::</span> |p{1cm}|p{7cm}|
+<a name="rest_code_62f8314b8a154066adcd2c23f94c7c04-2"></a>
+<a name="rest_code_62f8314b8a154066adcd2c23f94c7c04-3"></a><span class="p">..</span> <span class="ow">csv-table</span><span class="p">::</span> Caption of the figure
+<a name="rest_code_62f8314b8a154066adcd2c23f94c7c04-4"></a>   <span class="nc">:file:</span> <span class="nf">path-to-the/file.csv</span>
+<a name="rest_code_62f8314b8a154066adcd2c23f94c7c04-5"></a>   <span class="nc">:header-rows:</span> <span class="nf">1</span>
+<a name="rest_code_62f8314b8a154066adcd2c23f94c7c04-6"></a>   <span class="nc">:class:</span> <span class="nf">longtable</span>
+<a name="rest_code_62f8314b8a154066adcd2c23f94c7c04-7"></a>   <span class="nc">:widths:</span> <span class="nf">1 1</span>
 </pre>
 <p>This approach also works if you use a <a class="reference external" href="http://www.sphinx-doc.org/en/master/rest.html#tables">grid table</a> instead of a CSV table, with the proper changes.</p>
 <div class="section" id="convert-html-tables-to-rst">

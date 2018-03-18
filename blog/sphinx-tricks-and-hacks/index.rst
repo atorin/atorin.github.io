@@ -21,6 +21,21 @@ Of course, someone had already thought about that... Enter Riv!
 
 `Riv <https://github.com/gu-fan/riv.vim>`_ is a great plug-in, with many shortcuts to make your life easier when dealing with RST files. In my opinion, the best thing about Riv is how it handles table creation. You create cells by simply pressing tab, and when you modify the content, the table automatically reshapes when you exit the edit mode. 
 
+A few shortcuts for you:
+
+- :code:`tab`: move to the next cell
+
+- :code:`option + enter`: create the header row
+
+- :code:`control + enter`: create a new regular row
+
+.. figure:: http://www.albertotorin.it/blog-files/rst-tables-with-riv.gif
+   :alt: Create RST tables with Riv plug-in for MacVim
+   :width: 600 px
+   :align: center
+
+   Create tables with Riv.
+
 If you try Riv, don't forget to install `InstantRst <https://github.com/gu-fan/InstantRst>`_ as well. This will enable a live preview in the browser, as you edit your document. 
 
 
