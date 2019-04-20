@@ -1,32 +1,20 @@
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " vocab="http://ogp.me/ns" lang="en">
+<html prefix="        og: http://ogp.me/ns# article: http://ogp.me/ns/article#     " vocab="http://ogp.me/ns" lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>Sound synthesis of multiple degree-of-freedom systems in Matlab: Modal and finite different approach | Casual perambulations</title>
+<title>Sound synthesis of multiple degree-of-freedom systems in Matlab: Modal and finite different approach | Casual Perambulations</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
-<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
 <link rel="canonical" href="http://blog.albertotorin.it/blog/mdof-sound-synthesis/">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-        processEscapes: true
-    },
-    displayAlign: 'center', // Change this to 'center' to center equations.
-    "HTML-CSS": {
-        styles: {'.MathJax_Display': {"margin": 0}}
-    }
-});
-</script><!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Alberto Torin">
+<!--[if lt IE 9]><script src="../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Alberto Torin">
 <link rel="prev" href="../mdof-systems/" title="Multiple degree-of-freedom systems and ideal strings" type="text/html">
 <link rel="next" href="../sho-python/" title="Finite difference simulation of a simple harmonic oscillator in Python" type="text/html">
-<meta property="og:site_name" content="Casual perambulations">
+<meta property="og:site_name" content="Casual Perambulations">
 <meta property="og:title" content="Sound synthesis of multiple degree-of-freedom systems in Matlab: Modal">
 <meta property="og:url" content="http://blog.albertotorin.it/blog/mdof-sound-synthesis/">
 <meta property="og:description" content="This post is adapted from a lecture I gave on multiple degree-of-freedom systems (arrays of masses and springs) and their connection with ideal strings. Part 1 is presented in a previous post, and dea">
@@ -41,41 +29,45 @@ MathJax.Hub.Config({
 <meta property="article:tag" content="tutorial">
 </head>
 <body>
-<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
     <div id="container">
          
-    <header id="header"><h1 id="brand"><a href="http://blog.albertotorin.it/" title="Casual perambulations" rel="home">
+    <header id="header"><h1 id="brand"><a href="http://blog.albertotorin.it/" title="Casual Perambulations" rel="home">
 
-        <span id="blog-title">Casual perambulations</span>
+        <span id="blog-title">Casual Perambulations</span>
     </a></h1>
 
         
 
         
     <nav id="menu"><ul>
-<li><a href="../../about">About</a></li>
+<li><a href="../../about/">About</a></li>
                 <li><a href="../../archive.html">Archive</a></li>
                 <li><a href="../../categories/">Tags</a></li>
                 <li><a href="../../rss.xml">RSS feed</a></li>
+
+    
+
     
     
     </ul></nav></header><main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Sound synthesis of multiple degree-of-freedom systems in Matlab: Modal and finite different approach</a></h1>
 
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                     Alberto Torin
             </span></p>
-            <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2017-03-26T15:00:00+01:00" itemprop="datePublished" title="2017-03-26 15:00">2017-03-26 15:00</time></a></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2017-03-26T15:00:00+01:00" itemprop="datePublished" title="2017-03-26 15:00">2017-03-26 15:00</time></a>
+            </p>
             
-        <p class="sourceline"><a href="index.ipynb" id="sourcelink">Source</a></p>
+        <p class="sourceline"><a href="index.ipynb" class="sourcelink">Source</a></p>
 
         </div>
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">
-
+    <div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -136,7 +128,7 @@ $$\Omega^2 \vec{U} = \omega^2 D \vec{U} \quad \text{and} \quad \Omega = \omega \
 <span class="n">D</span> <span class="p">=</span> <span class="n">createTridiag</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -145,7 +137,9 @@ $$\Omega^2 \vec{U} = \omega^2 D \vec{U} \quad \text{and} \quad \Omega = \omega \
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[1]:</div>
+
+    <div class="prompt output_prompt">Out[1]:</div>
+
 
 
 
@@ -190,7 +184,7 @@ $$\Omega^2 \vec{U} = \omega^2 D \vec{U} \quad \text{and} \quad \Omega = \omega \
 <span class="n">V50</span> <span class="p">=</span> <span class="p">[</span><span class="nb">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">N</span><span class="p">);</span> <span class="n">V50</span><span class="p">;</span> <span class="nb">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">N</span><span class="p">)</span> <span class="p">];</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -222,7 +216,7 @@ $$\Omega^2 \vec{U} = \omega^2 D \vec{U} \quad \text{and} \quad \Omega = \omega \
 <span class="nb">axis</span> <span class="n">off</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -231,7 +225,9 @@ $$\Omega^2 \vec{U} = \omega^2 D \vec{U} \quad \text{and} \quad \Omega = \omega \
 
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 
 
@@ -263,7 +259,7 @@ $$\Omega^2 \vec{U} = \omega^2 D \vec{U} \quad \text{and} \quad \Omega = \omega \
 <div class=" highlight hl-octave"><pre><span></span><span class="n">ev50</span> <span class="p">=</span> <span class="nb">sqrt</span><span class="p">(</span><span class="nb">diag</span><span class="p">(</span><span class="n">E50</span><span class="p">));</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -290,7 +286,7 @@ $$\Omega^2 \vec{U} = \omega^2 D \vec{U} \quad \text{and} \quad \Omega = \omega \
 <span class="n">phi</span> <span class="p">=</span> <span class="nb">zeros</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -304,7 +300,7 @@ $$\Omega^2 \vec{U} = \omega^2 D \vec{U} \quad \text{and} \quad \Omega = \omega \
 <span class="nb">title</span><span class="p">(</span><span class="s">'Amplitudes for the various modes'</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -313,7 +309,9 @@ $$\Omega^2 \vec{U} = \omega^2 D \vec{U} \quad \text{and} \quad \Omega = \omega \
 
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 
 
@@ -345,7 +343,7 @@ $$\Omega^2 \vec{U} = \omega^2 D \vec{U} \quad \text{and} \quad \Omega = \omega \
 <div class=" highlight hl-octave"><pre><span></span><span class="n">pt</span> <span class="p">=</span> <span class="mi">23</span><span class="p">;</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -373,7 +371,7 @@ $$\Omega^2 \vec{U} = \omega^2 D \vec{U} \quad \text{and} \quad \Omega = \omega \
 <span class="n">snd</span> <span class="p">=</span> <span class="nb">spdiags</span><span class="p">(</span><span class="n">Amps</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span> <span class="o">*</span> <span class="nb">sin</span><span class="p">(</span><span class="n">T</span><span class="p">);</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -401,7 +399,7 @@ $$\Omega^2 \vec{U} = \omega^2 D \vec{U} \quad \text{and} \quad \Omega = \omega \
 <span class="nb">hold</span> <span class="n">off</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -410,7 +408,9 @@ $$\Omega^2 \vec{U} = \omega^2 D \vec{U} \quad \text{and} \quad \Omega = \omega \
 
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 
 
@@ -443,7 +443,7 @@ $$\Omega^2 \vec{U} = \omega^2 D \vec{U} \quad \text{and} \quad \Omega = \omega \
 <span class="nb">plot</span><span class="p">(</span><span class="n">y</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2000</span><span class="p">),</span> <span class="s">'k'</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -452,7 +452,9 @@ $$\Omega^2 \vec{U} = \omega^2 D \vec{U} \quad \text{and} \quad \Omega = \omega \
 
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 
 
@@ -485,7 +487,7 @@ $$\Omega^2 \vec{U} = \omega^2 D \vec{U} \quad \text{and} \quad \Omega = \omega \
 <span class="n">audiowrite</span><span class="p">(</span><span class="s">'modal.wav'</span><span class="p">,</span> <span class="n">y</span><span class="o">/</span><span class="nb">max</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">y</span><span class="p">)),</span> <span class="mi">44100</span><span class="p">);</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -525,9 +527,7 @@ $$ M \frac{\vec{u}^{ n+1} - 2\vec{u}^{ n} + \vec{u}^{ n-1}}{k^2} = - K \vec{u}^n
 </div>
 </div>
 </div>
-    </div>
-  </div>
-
+</div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
 <li><a class="tag p-category" href="../../categories/finite-difference/" rel="tag">finite difference</a></li>
@@ -545,29 +545,21 @@ $$ M \frac{\vec{u}^{ n+1} - 2\vec{u}^{ n} + \vec{u}^{ n-1}}{k^2} = - K \vec{u}^n
             <li class="next">
                 <a href="../sho-python/" rel="next" title="Finite difference simulation of a simple harmonic oscillator in Python">Next post</a>
             </li>
-        </ul></nav></aside><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script><script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-        processEscapes: true
-    },
-    displayAlign: 'center', // Change this to 'center' to center equations.
-    "HTML-CSS": {
-        styles: {'.MathJax_Display': {"margin": 0}}
-    }
-});
-</script></article></main><footer id="footer"><p>Contents © 2018         <a href="mailto:info@albertotorin.it">Alberto Torin</a>   under Creative Commons BY 
+        </ul></nav></aside><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
+        </script></article></main><footer id="footer"><p>Contents © 2019         <a href="mailto:info@albertotorin.it">Alberto Torin</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
 <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
-<img alt="Creative Commons License BY" style="border-width:0; margin-bottom:0px;" src="https://i.creativecommons.org/l/by/4.0/80x15.png"></a>    -   Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>        </p>
+<img alt="Creative Commons License BY" style="border-width:0; margin-bottom:0px;" src="https://i.creativecommons.org/l/by/4.0/80x15.png"></a></p>
             
         </footer>
 </div>
     
-    
-
-    
-    
-    
+            <script src="../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
 </body>
 </html>

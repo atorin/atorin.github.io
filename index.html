@@ -1,70 +1,85 @@
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " vocab="http://ogp.me/ns" lang="en">
+<html prefix="        og: http://ogp.me/ns# article: http://ogp.me/ns/article#     " vocab="http://ogp.me/ns" lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="A blog about numerical simulation.">
+<meta name="description" content="A blog about numerical simulation (mainly) and random interesting stuff">
 <meta name="viewport" content="width=device-width">
-<title>Casual perambulations</title>
+<title>Casual Perambulations</title>
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link href="assets/css/ipython.min.css" rel="stylesheet" type="text/css">
 <link href="assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
-<link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
 <link rel="canonical" href="http://blog.albertotorin.it/">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-        processEscapes: true
-    },
-    displayAlign: 'center', // Change this to 'center' to center equations.
-    "HTML-CSS": {
-        styles: {'.MathJax_Display': {"margin": 0}}
-    }
-});
-</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="blog/sphinx-tricks-and-hacks/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5shiv-printshiv.min.js"></script><![endif]--><link rel="prefetch" href="blog/sphinx-tricks-and-hacks/" type="text/html">
 </head>
 <body>
-<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
     <div id="container">
          
-    <header id="header"><h1 id="brand"><a href="http://blog.albertotorin.it/" title="Casual perambulations" rel="home">
+    <header id="header"><h1 id="brand"><a href="http://blog.albertotorin.it/" title="Casual Perambulations" rel="home">
 
-        <span id="blog-title">Casual perambulations</span>
+        <span id="blog-title">Casual Perambulations</span>
     </a></h1>
 
         
 
         
     <nav id="menu"><ul>
-<li><a href="about">About</a></li>
+<li><a href="about/">About</a></li>
                 <li><a href="archive.html">Archive</a></li>
                 <li><a href="categories/">Tags</a></li>
                 <li><a href="rss.xml">RSS feed</a></li>
+
+    
+
     
     
     </ul></nav></header><main id="content"><div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/sphinx-tricks-and-hacks/" class="u-url">Some tricks and hacks with Sphinx</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="blog/sphinx-tricks-and-hacks/" class="u-url">Some tricks and hacks with Sphinx</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Alberto Torin
             </span></p>
-            <p class="dateline"><a href="blog/sphinx-tricks-and-hacks/" rel="bookmark"><time class="published dt-published" datetime="2018-03-17T15:00:00+01:00" title="2018-03-17 15:00">2018-03-17 15:00</time></a></p>
+            <p class="dateline">
+            <a href="blog/sphinx-tricks-and-hacks/" rel="bookmark">
+            <time class="published dt-published" datetime="2018-03-17T15:00:00+01:00" itemprop="datePublished" title="2018-03-17 15:00">2018-03-17 15:00</time></a>
+            </p>
         </div>
     </header><div class="p-summary entry-summary">
     <div>
 <p>This is a (hopefully!) growing collection of tricks and hacks that I have come across working with <a class="reference external" href="http://docutils.sourceforge.net/rst.html">RST documents</a>, <a class="reference external" href="http://www.sphinx-doc.org/">Sphinx</a> and <a class="reference external" href="http://readthedocs.org">Read the Docs</a>.</p>
+<div class="section" id="vim-and-rst">
+<h2>Vim and RST</h2>
+<p>I love Vim (actually, MacVim), and as soon as I started working with RST documents for the first time, I hoped to find a nice plug-in to speed up my editing.</p>
+<p>Of course, someone had already thought about that... Enter Riv!</p>
+<p><a class="reference external" href="https://github.com/gu-fan/riv.vim">Riv</a> is a great plug-in, with many shortcuts to make your life easier when dealing with RST files. In my opinion, the best thing about Riv is how it handles table creation. You create cells by simply pressing tab, and when you modify the content, the table automatically reshapes when you exit the edit mode.</p>
+<p>A few shortcuts for you:</p>
+<ul class="simple">
+<li>
+<code>tab</code>: move to the next cell</li>
+<li>
+<code>option + enter</code>: create the header row</li>
+<li>
+<code>control + enter</code>: create a new regular row</li>
+</ul>
+<div class="figure align-center">
+<img alt="Create RST tables with Riv plug-in for MacVim" src="http://www.albertotorin.it/blog-files/rst-tables-with-riv.gif" style="width: 600px;"><p class="caption">Create tables with Riv.</p>
+</div>
 <p class="more"><a href="blog/sphinx-tricks-and-hacks/">Read more…</a></p>
 </div>
+</div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/omegat-quick-start/" class="u-url">How to translate a document or review a translation with OmegaT</a></h1>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="blog/omegat-quick-start/" class="u-url">How to translate a document or review a translation with OmegaT</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Alberto Torin
             </span></p>
-            <p class="dateline"><a href="blog/omegat-quick-start/" rel="bookmark"><time class="published dt-published" datetime="2017-12-26T15:00:00+01:00" title="2017-12-26 15:00">2017-12-26 15:00</time></a></p>
+            <p class="dateline">
+            <a href="blog/omegat-quick-start/" rel="bookmark">
+            <time class="published dt-published" datetime="2017-12-26T15:00:00+01:00" itemprop="datePublished" title="2017-12-26 15:00">2017-12-26 15:00</time></a>
+            </p>
         </div>
     </header><div class="p-summary entry-summary">
     <div>
@@ -78,18 +93,18 @@ MathJax.Hub.Config({
 <p class="more"><a href="blog/omegat-quick-start/">Read more…</a></p>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/sho-python/" class="u-url">Finite difference simulation of a simple harmonic oscillator in Python</a></h1>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="blog/sho-python/" class="u-url">Finite difference simulation of a simple harmonic oscillator in Python</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Alberto Torin
             </span></p>
-            <p class="dateline"><a href="blog/sho-python/" rel="bookmark"><time class="published dt-published" datetime="2017-10-07T15:00:00+01:00" title="2017-10-07 15:00">2017-10-07 15:00</time></a></p>
+            <p class="dateline">
+            <a href="blog/sho-python/" rel="bookmark">
+            <time class="published dt-published" datetime="2017-10-07T15:00:00+01:00" itemprop="datePublished" title="2017-10-07 15:00">2017-10-07 15:00</time></a>
+            </p>
         </div>
     </header><div class="p-summary entry-summary">
-    <div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">
-
-<div class="cell border-box-sizing text_cell rendered">
+    <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -100,21 +115,19 @@ MathJax.Hub.Config({
 </div>
 </div>
 </div>
-</div>
-</div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/mdof-sound-synthesis/" class="u-url">Sound synthesis of multiple degree-of-freedom systems in Matlab: Modal and finite different approach</a></h1>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="blog/mdof-sound-synthesis/" class="u-url">Sound synthesis of multiple degree-of-freedom systems in Matlab: Modal and finite different approach</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Alberto Torin
             </span></p>
-            <p class="dateline"><a href="blog/mdof-sound-synthesis/" rel="bookmark"><time class="published dt-published" datetime="2017-03-26T15:00:00+01:00" title="2017-03-26 15:00">2017-03-26 15:00</time></a></p>
+            <p class="dateline">
+            <a href="blog/mdof-sound-synthesis/" rel="bookmark">
+            <time class="published dt-published" datetime="2017-03-26T15:00:00+01:00" itemprop="datePublished" title="2017-03-26 15:00">2017-03-26 15:00</time></a>
+            </p>
         </div>
     </header><div class="p-summary entry-summary">
-    <div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">
-
-<div class="cell border-box-sizing text_cell rendered">
+    <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -125,20 +138,19 @@ MathJax.Hub.Config({
 </div>
 </div>
 </div>
-</div>
-</div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/mdof-systems/" class="u-url">Multiple degree-of-freedom systems and ideal strings</a></h1>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="blog/mdof-systems/" class="u-url">Multiple degree-of-freedom systems and ideal strings</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Alberto Torin
             </span></p>
-            <p class="dateline"><a href="blog/mdof-systems/" rel="bookmark"><time class="published dt-published" datetime="2017-03-24T15:00:00+01:00" title="2017-03-24 15:00">2017-03-24 15:00</time></a></p>
+            <p class="dateline">
+            <a href="blog/mdof-systems/" rel="bookmark">
+            <time class="published dt-published" datetime="2017-03-24T15:00:00+01:00" itemprop="datePublished" title="2017-03-24 15:00">2017-03-24 15:00</time></a>
+            </p>
         </div>
     </header><div class="p-summary entry-summary">
-    <div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">
-
+    <div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -169,19 +181,19 @@ MathJax.Hub.Config({
 </div>
 </div>
 </div>
-</div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/energy-fd-sho/" class="u-url">Energy conservation in a finite difference simulation of a simple harmonic oscillator</a></h1>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="blog/energy-fd-sho/" class="u-url">Energy conservation in a finite difference simulation of a simple harmonic oscillator</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Alberto Torin
             </span></p>
-            <p class="dateline"><a href="blog/energy-fd-sho/" rel="bookmark"><time class="published dt-published" datetime="2016-11-12T15:00:00+01:00" title="2016-11-12 15:00">2016-11-12 15:00</time></a></p>
+            <p class="dateline">
+            <a href="blog/energy-fd-sho/" rel="bookmark">
+            <time class="published dt-published" datetime="2016-11-12T15:00:00+01:00" itemprop="datePublished" title="2016-11-12 15:00">2016-11-12 15:00</time></a>
+            </p>
         </div>
     </header><div class="p-summary entry-summary">
-    <div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">
-
+    <div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -205,19 +217,19 @@ $$ H(t) = \frac{M}{2} \left( \frac{du}{dt} \right)^2 + \frac{K}{2} u^2, \qquad \
 </div>
 </div>
 </div>
-</div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/anatomy-fd-sho/" class="u-url">Anatomy of a finite difference scheme: How to simulate a simple harmonic oscillator with Julia</a></h1>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="blog/anatomy-fd-sho/" class="u-url">Anatomy of a finite difference scheme: How to simulate a simple harmonic oscillator with Julia</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Alberto Torin
             </span></p>
-            <p class="dateline"><a href="blog/anatomy-fd-sho/" rel="bookmark"><time class="published dt-published" datetime="2016-09-20T15:00:00+01:00" title="2016-09-20 15:00">2016-09-20 15:00</time></a></p>
+            <p class="dateline">
+            <a href="blog/anatomy-fd-sho/" rel="bookmark">
+            <time class="published dt-published" datetime="2016-09-20T15:00:00+01:00" itemprop="datePublished" title="2016-09-20 15:00">2016-09-20 15:00</time></a>
+            </p>
         </div>
     </header><div class="p-summary entry-summary">
-    <div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">
-
+    <div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -268,7 +280,6 @@ $$u(0) = u_0, \qquad \text{ and } \qquad \frac{du}{dt}\Bigr|_{t=0} = v_0.$$
 </div>
 </div>
 </div>
-</div>
     </div>
     </article>
 </div>
@@ -277,29 +288,22 @@ $$u(0) = u_0, \qquad \text{ and } \qquad \frac{du}{dt}\Bigr|_{t=0} = v_0.$$
 
 
 
-            <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script><script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-        processEscapes: true
-    },
-    displayAlign: 'center', // Change this to 'center' to center equations.
-    "HTML-CSS": {
-        styles: {'.MathJax_Display': {"margin": 0}}
-    }
-});
-</script></main><footer id="footer"><p>Contents © 2018         <a href="mailto:info@albertotorin.it">Alberto Torin</a>   under Creative Commons BY 
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
+        </script></main><footer id="footer"><p>Contents © 2019         <a href="mailto:info@albertotorin.it">Alberto Torin</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
 <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
-<img alt="Creative Commons License BY" style="border-width:0; margin-bottom:0px;" src="https://i.creativecommons.org/l/by/4.0/80x15.png"></a>    -   Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>        </p>
+<img alt="Creative Commons License BY" style="border-width:0; margin-bottom:0px;" src="https://i.creativecommons.org/l/by/4.0/80x15.png"></a></p>
             
         </footer>
 </div>
     
-    
-
-    
-    
-    
+            <script src="assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
 </body>
 </html>

@@ -1,33 +1,20 @@
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " vocab="http://ogp.me/ns" lang="en">
+<html prefix="        og: http://ogp.me/ns# article: http://ogp.me/ns/article#     " vocab="http://ogp.me/ns" lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="description" content='"A few tricks and hacks with RST documents and Sphinx"'>
 <meta name="viewport" content="width=device-width">
-<title>Some tricks and hacks with Sphinx | Casual perambulations</title>
+<title>Some tricks and hacks with Sphinx | Casual Perambulations</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
-<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
 <link rel="canonical" href="http://blog.albertotorin.it/blog/sphinx-tricks-and-hacks/">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-        processEscapes: true
-    },
-    displayAlign: 'center', // Change this to 'center' to center equations.
-    "HTML-CSS": {
-        styles: {'.MathJax_Display': {"margin": 0}}
-    }
-});
-</script><!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="description" content='"A few tricks and hacks with RST documents and Sphinx"'>
-<meta name="author" content="Alberto Torin">
+<!--[if lt IE 9]><script src="../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Alberto Torin">
 <link rel="prev" href="../omegat-quick-start/" title="How to translate a document or review a translation with OmegaT" type="text/html">
-<meta property="og:site_name" content="Casual perambulations">
+<meta property="og:site_name" content="Casual Perambulations">
 <meta property="og:title" content="Some tricks and hacks with Sphinx">
 <meta property="og:url" content="http://blog.albertotorin.it/blog/sphinx-tricks-and-hacks/">
 <meta property="og:description" content='"A few tricks and hacks with RST documents and Sphinx"'>
@@ -37,42 +24,46 @@ MathJax.Hub.Config({
 <meta property="article:tag" content="sphinx">
 </head>
 <body>
-<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
     <div id="container">
          
-    <header id="header"><h1 id="brand"><a href="http://blog.albertotorin.it/" title="Casual perambulations" rel="home">
+    <header id="header"><h1 id="brand"><a href="http://blog.albertotorin.it/" title="Casual Perambulations" rel="home">
 
-        <span id="blog-title">Casual perambulations</span>
+        <span id="blog-title">Casual Perambulations</span>
     </a></h1>
 
         
 
         
     <nav id="menu"><ul>
-<li><a href="../../about">About</a></li>
+<li><a href="../../about/">About</a></li>
                 <li><a href="../../archive.html">Archive</a></li>
                 <li><a href="../../categories/">Tags</a></li>
                 <li><a href="../../rss.xml">RSS feed</a></li>
+
+    
+
     
     
     </ul></nav></header><main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Some tricks and hacks with Sphinx</a></h1>
 
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                     Alberto Torin
             </span></p>
-            <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2018-03-17T15:00:00+01:00" itemprop="datePublished" title="2018-03-17 15:00">2018-03-17 15:00</time></a></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2018-03-17T15:00:00+01:00" itemprop="datePublished" title="2018-03-17 15:00">2018-03-17 15:00</time></a>
+            </p>
             
-        <p class="sourceline"><a href="index.rst" id="sourcelink">Source</a></p>
+        <p class="sourceline"><a href="index.rst" class="sourcelink">Source</a></p>
 
-                <meta name="description" itemprop="description" content='"A few tricks and hacks with RST documents and Sphinx"'>
-</div>
+        </div>
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
 <p>This is a (hopefully!) growing collection of tricks and hacks that I have come across working with <a class="reference external" href="http://docutils.sourceforge.net/rst.html">RST documents</a>, <a class="reference external" href="http://www.sphinx-doc.org/">Sphinx</a> and <a class="reference external" href="http://readthedocs.org">Read the Docs</a>.</p>
-<!-- TEASER_END -->
 <div class="section" id="vim-and-rst">
 <h2>Vim and RST</h2>
 <p>I love Vim (actually, MacVim), and as soon as I started working with RST documents for the first time, I hoped to find a nice plug-in to speed up my editing.</p>
@@ -90,6 +81,7 @@ MathJax.Hub.Config({
 <div class="figure align-center">
 <img alt="Create RST tables with Riv plug-in for MacVim" src="http://www.albertotorin.it/blog-files/rst-tables-with-riv.gif" style="width: 600px;"><p class="caption">Create tables with Riv.</p>
 </div>
+<!-- TEASER_END -->
 <p>If you try Riv, don't forget to install <a class="reference external" href="https://github.com/gu-fan/InstantRst">InstantRst</a> as well. This will enable a live preview in the browser, as you edit your document.</p>
 </div>
 <div class="section" id="tables-in-sphinx">
@@ -99,13 +91,13 @@ MathJax.Hub.Config({
 <p>One of the best options, in my option, is to work with CSV tables. You can create your table in a spreadsheet, without the need to worry about the proper formatting in RST.
 To take care of the PDF output for those long tables that won't fit on a single page, you can use the <code>longtable</code> class. Then, with the <code>tabularcolumns</code> directive, you can control the width of the columns in your PDF.</p>
 <p>This is a sample code snippet to render a table from a CSV file. Check the result in the <a class="reference external" href="http://tables-with-sphinx.readthedocs.io/en/latest/csv-table.html">tutorial</a>.</p>
-<pre class="code rst"><a name="rest_code_62f8314b8a154066adcd2c23f94c7c04-1"></a><span class="p">..</span> <span class="ow">tabularcolumns</span><span class="p">::</span> |p{1cm}|p{7cm}|
-<a name="rest_code_62f8314b8a154066adcd2c23f94c7c04-2"></a>
-<a name="rest_code_62f8314b8a154066adcd2c23f94c7c04-3"></a><span class="p">..</span> <span class="ow">csv-table</span><span class="p">::</span> Caption of the figure
-<a name="rest_code_62f8314b8a154066adcd2c23f94c7c04-4"></a>   <span class="nc">:file:</span> <span class="nf">path-to-the/file.csv</span>
-<a name="rest_code_62f8314b8a154066adcd2c23f94c7c04-5"></a>   <span class="nc">:header-rows:</span> <span class="nf">1</span>
-<a name="rest_code_62f8314b8a154066adcd2c23f94c7c04-6"></a>   <span class="nc">:class:</span> <span class="nf">longtable</span>
-<a name="rest_code_62f8314b8a154066adcd2c23f94c7c04-7"></a>   <span class="nc">:widths:</span> <span class="nf">1 1</span>
+<pre class="code rst"><a name="rest_code_e0f939cb1c404df198ef65883690ad17-1"></a><span class="p">..</span> <span class="ow">tabularcolumns</span><span class="p">::</span> |p{1cm}|p{7cm}|
+<a name="rest_code_e0f939cb1c404df198ef65883690ad17-2"></a>
+<a name="rest_code_e0f939cb1c404df198ef65883690ad17-3"></a><span class="p">..</span> <span class="ow">csv-table</span><span class="p">::</span> Caption of the figure
+<a name="rest_code_e0f939cb1c404df198ef65883690ad17-4"></a>   <span class="nc">:file:</span> <span class="nf">path-to-the/file.csv</span>
+<a name="rest_code_e0f939cb1c404df198ef65883690ad17-5"></a>   <span class="nc">:header-rows:</span> <span class="nf">1</span>
+<a name="rest_code_e0f939cb1c404df198ef65883690ad17-6"></a>   <span class="nc">:class:</span> <span class="nf">longtable</span>
+<a name="rest_code_e0f939cb1c404df198ef65883690ad17-7"></a>   <span class="nc">:widths:</span> <span class="nf">1 1</span>
 </pre>
 <p>This approach also works if you use a <a class="reference external" href="http://www.sphinx-doc.org/en/master/rest.html#tables">grid table</a> instead of a CSV table, with the proper changes.</p>
 <div class="section" id="convert-html-tables-to-rst">
@@ -128,17 +120,19 @@ To take care of the PDF output for those long tables that won't fit on a single 
 <li class="previous">
                 <a href="../omegat-quick-start/" rel="prev" title="How to translate a document or review a translation with OmegaT">Previous post</a>
             </li>
-        </ul></nav></aside></article></main><footer id="footer"><p>Contents © 2018         <a href="mailto:info@albertotorin.it">Alberto Torin</a>   under Creative Commons BY 
+        </ul></nav></aside></article></main><footer id="footer"><p>Contents © 2019         <a href="mailto:info@albertotorin.it">Alberto Torin</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
 <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
-<img alt="Creative Commons License BY" style="border-width:0; margin-bottom:0px;" src="https://i.creativecommons.org/l/by/4.0/80x15.png"></a>    -   Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>        </p>
+<img alt="Creative Commons License BY" style="border-width:0; margin-bottom:0px;" src="https://i.creativecommons.org/l/by/4.0/80x15.png"></a></p>
             
         </footer>
 </div>
     
-    
-
-    
-    
-    
+            <script src="../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
 </body>
 </html>

@@ -1,26 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Casual perambulations (Posts about string)</title><link>http://blog.albertotorin.it/</link><description></description><atom:link type="application/rss+xml" href="http://blog.albertotorin.it/categories/string.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sun, 01 Oct 2017 20:52:02 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Multiple degree-of-freedom systems and ideal strings</title><link>http://blog.albertotorin.it/blog/mdof-systems/</link><dc:creator>Alberto Torin</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
-    &lt;div class="container" id="notebook-container"&gt;
-
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Casual Perambulations (Posts about string)</title><link>http://blog.albertotorin.it/</link><description></description><atom:link href="http://blog.albertotorin.it/categories/string.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019 &lt;a href="mailto:info@albertotorin.it"&gt;Alberto Torin&lt;/a&gt; 
+&lt;a rel="license" href="https://creativecommons.org/licenses/by/4.0/"&gt;
+&lt;img alt="Creative Commons License BY"
+style="border-width:0; margin-bottom:0px;"
+src="https://i.creativecommons.org/l/by/4.0/80x15.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Sat, 20 Apr 2019 18:30:38 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Multiple degree-of-freedom systems and ideal strings</title><link>http://blog.albertotorin.it/posts/mdof-systems/</link><dc:creator>Alberto Torin</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;This post is adapted from a &lt;a href="https://github.com/atorin/Dynamics3-Lecture"&gt;lecture&lt;/a&gt; I gave on multiple degree-of-freedom systems (arrays of masses and springs) and their connection with ideal strings. Here's a brief outline:&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Outline"&gt;Outline&lt;a class="anchor-link" href="http://blog.albertotorin.it/blog/mdof-systems/#Outline"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;h5 id="Multiple-degree-of-freedom-systems"&gt;Multiple degree-of-freedom systems&lt;a class="anchor-link" href="http://blog.albertotorin.it/blog/mdof-systems/#Multiple-degree-of-freedom-systems"&gt;¶&lt;/a&gt;&lt;/h5&gt;&lt;hr&gt;
+&lt;h3 id="Outline"&gt;Outline&lt;a class="anchor-link" href="http://blog.albertotorin.it/posts/mdof-systems/#Outline"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;h5 id="Multiple-degree-of-freedom-systems"&gt;Multiple degree-of-freedom systems&lt;a class="anchor-link" href="http://blog.albertotorin.it/posts/mdof-systems/#Multiple-degree-of-freedom-systems"&gt;¶&lt;/a&gt;&lt;/h5&gt;&lt;hr&gt;
 &lt;ul&gt;
 &lt;li&gt;Equations of motion&lt;/li&gt;
 &lt;li&gt;Simple example&lt;/li&gt;
 &lt;li&gt;Normal modes and frequencies&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;a href="http://blog.albertotorin.it/blog/mdof-systems/"&gt;Read more…&lt;/a&gt; (13 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>jupyter</category><category>matlab</category><category>oscillator</category><category>sho</category><category>string</category><guid>http://blog.albertotorin.it/blog/mdof-systems/</guid><pubDate>Fri, 24 Mar 2017 14:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="http://blog.albertotorin.it/posts/mdof-systems/"&gt;Read more…&lt;/a&gt; (13 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>jupyter</category><category>matlab</category><category>oscillator</category><category>sho</category><category>string</category><guid>http://blog.albertotorin.it/posts/mdof-systems/</guid><pubDate>Fri, 24 Mar 2017 14:00:00 GMT</pubDate></item></channel></rss>

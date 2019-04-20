@@ -1,3 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Casual perambulations (Posts about rst)</title><link>http://blog.albertotorin.it/</link><description></description><atom:link rel="self" href="http://blog.albertotorin.it/categories/rst.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sun, 18 Mar 2018 12:44:44 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Some tricks and hacks with Sphinx</title><link>http://blog.albertotorin.it/blog/sphinx-tricks-and-hacks/</link><dc:creator>Alberto Torin</dc:creator><description>&lt;div&gt;&lt;p&gt;This is a (hopefully!) growing collection of tricks and hacks that I have come across working with &lt;a class="reference external" href="http://docutils.sourceforge.net/rst.html"&gt;RST documents&lt;/a&gt;, &lt;a class="reference external" href="http://www.sphinx-doc.org/"&gt;Sphinx&lt;/a&gt; and &lt;a class="reference external" href="http://readthedocs.org"&gt;Read the Docs&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://blog.albertotorin.it/blog/sphinx-tricks-and-hacks/"&gt;Read more…&lt;/a&gt; (2 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>rst</category><category>sphinx</category><guid>http://blog.albertotorin.it/blog/sphinx-tricks-and-hacks/</guid><pubDate>Sat, 17 Mar 2018 14:00:00 GMT</pubDate></item></channel></rss>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Casual Perambulations (Posts about rst)</title><link>http://blog.albertotorin.it/</link><description></description><atom:link href="http://blog.albertotorin.it/categories/rst.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019 &lt;a href="mailto:info@albertotorin.it"&gt;Alberto Torin&lt;/a&gt; 
+&lt;a rel="license" href="https://creativecommons.org/licenses/by/4.0/"&gt;
+&lt;img alt="Creative Commons License BY"
+style="border-width:0; margin-bottom:0px;"
+src="https://i.creativecommons.org/l/by/4.0/80x15.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Sat, 20 Apr 2019 19:51:18 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Some tricks and hacks with Sphinx</title><link>http://blog.albertotorin.it/blog/sphinx-tricks-and-hacks/</link><dc:creator>Alberto Torin</dc:creator><description>&lt;div&gt;&lt;p&gt;This is a (hopefully!) growing collection of tricks and hacks that I have come across working with &lt;a class="reference external" href="http://docutils.sourceforge.net/rst.html"&gt;RST documents&lt;/a&gt;, &lt;a class="reference external" href="http://www.sphinx-doc.org/"&gt;Sphinx&lt;/a&gt; and &lt;a class="reference external" href="http://readthedocs.org"&gt;Read the Docs&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="section" id="vim-and-rst"&gt;
+&lt;h2&gt;Vim and RST&lt;/h2&gt;
+&lt;p&gt;I love Vim (actually, MacVim), and as soon as I started working with RST documents for the first time, I hoped to find a nice plug-in to speed up my editing.&lt;/p&gt;
+&lt;p&gt;Of course, someone had already thought about that... Enter Riv!&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/gu-fan/riv.vim"&gt;Riv&lt;/a&gt; is a great plug-in, with many shortcuts to make your life easier when dealing with RST files. In my opinion, the best thing about Riv is how it handles table creation. You create cells by simply pressing tab, and when you modify the content, the table automatically reshapes when you exit the edit mode.&lt;/p&gt;
+&lt;p&gt;A few shortcuts for you:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;code&gt;tab&lt;/code&gt;: move to the next cell&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;option + enter&lt;/code&gt;: create the header row&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;control + enter&lt;/code&gt;: create a new regular row&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="figure align-center"&gt;
+&lt;img alt="Create RST tables with Riv plug-in for MacVim" src="http://www.albertotorin.it/blog-files/rst-tables-with-riv.gif" style="width: 600px;"&gt;
+&lt;p class="caption"&gt;Create tables with Riv.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;a href="http://blog.albertotorin.it/blog/sphinx-tricks-and-hacks/"&gt;Read more…&lt;/a&gt; (2 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</description><category>rst</category><category>sphinx</category><guid>http://blog.albertotorin.it/blog/sphinx-tricks-and-hacks/</guid><pubDate>Sat, 17 Mar 2018 14:00:00 GMT</pubDate></item></channel></rss>

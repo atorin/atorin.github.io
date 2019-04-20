@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /*
-	Copyright © 2014-2017 Daniel Aleksandersen and others.
+	Copyright © 2014-2019 Daniel Aleksandersen and others.
 
 	Permission is hereby granted, free of charge, to any
 	person obtaining a copy of this software and associated
@@ -28,7 +28,7 @@
 
 body {
 	color: #4F5151;
-	font-family: Palatino, Helvetica, Arial, sans-serif;
+	font-family: Helvetica, Arial, sans-serif;
 	font-size: 17px;
 	line-height: 1.4;
 	padding: 1em;
@@ -84,7 +84,7 @@ body {
 	float: left;
 }
 
-.posttranslations h3 {
+.posttranslations h3, .translationslist h3 {
 	display: inline;
 	font-size: 1em;
 }
@@ -93,7 +93,7 @@ body {
 	font-size: 2em;
 }
 
-.posttranslations h3:last-child {
+.posttranslations h3:last-child, .translationslist h3:last-child {
 	display: none;
 }
 
@@ -120,7 +120,8 @@ body {
 }
 .metadata p:before,
 .postpromonav .tags li:before,
-.postlist .listdate:after {
+.postlist .listdate:after,
+.translationslist p:before {
 	content: " — ";
 }
 .postlist li {
@@ -153,7 +154,8 @@ body {
 }
 
 .metadata p:first-of-type:before,
-.postpromonav .tags li:first-of-type:before {
+.postpromonav .tags li:first-of-type:before,
+.translationslist p:first-of-type:before {
 	content: "";
 }
 .postpromonav .pager {
@@ -193,7 +195,8 @@ body {
     cursor: not-allowed;
 }
 
-.metadata p {
+.metadata p,
+.translationslist p {
 	display: inline;
 }
 
@@ -208,7 +211,7 @@ body {
 	text-decoration: none;
 }
 :visited {
-	color: #1168CC;
+	color: #6830BB;
 }
 :link:hover, :visited:hover {
 	color: #0d53a3;
@@ -324,8 +327,7 @@ pre.code, code {
 	a,
 	a:visited {
 		text-decoration: underline;
-        color: #1168CC;
-    }
+	}
 
 	a[href]:after {
 		content: " (" attr(href) ")";

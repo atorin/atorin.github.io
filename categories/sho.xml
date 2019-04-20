@@ -1,55 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Casual perambulations (Posts about sho)</title><link>http://blog.albertotorin.it/</link><description></description><atom:link rel="self" type="application/rss+xml" href="http://blog.albertotorin.it/categories/sho.xml"></atom:link><language>en</language><lastBuildDate>Sat, 07 Oct 2017 20:00:48 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Finite difference simulation of a simple harmonic oscillator in Python</title><link>http://blog.albertotorin.it/blog/sho-python/</link><dc:creator>Alberto Torin</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
-    &lt;div class="container" id="notebook-container"&gt;
-
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Casual Perambulations (Posts about sho)</title><link>http://blog.albertotorin.it/</link><description></description><atom:link href="http://blog.albertotorin.it/categories/sho.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019 &lt;a href="mailto:info@albertotorin.it"&gt;Alberto Torin&lt;/a&gt; 
+&lt;a rel="license" href="https://creativecommons.org/licenses/by/4.0/"&gt;
+&lt;img alt="Creative Commons License BY"
+style="border-width:0; margin-bottom:0px;"
+src="https://i.creativecommons.org/l/by/4.0/80x15.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Sat, 20 Apr 2019 18:30:37 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Finite difference simulation of a simple harmonic oscillator in Python</title><link>http://blog.albertotorin.it/posts/sho-python/</link><dc:creator>Alberto Torin</dc:creator><description>&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;When I first started learning Python a couple of years ago, I was looking for a simple case to test my newly acquired skills. The simulation of a &lt;a href="https://en.wikipedia.org/wiki/Simple_harmonic_motion"&gt;simple harmonic oscillator&lt;/a&gt; using finite difference methods was the simplest problem I can think of with a bit of complexity, a sort of "Hello World!" on steroids.&lt;/p&gt;
 &lt;p&gt;I have already discussed about the harmonic oscillator and the anatomy of a finite difference code in a &lt;a href="http://blog.albertotorin.it/blog/anatomy-fd-sho/"&gt;previous post&lt;/a&gt;. (You haven't read it? Go ahead, I'll wait... done?) Here, I will simply give my rendition of the algorithm (specifically using Python 3).&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://blog.albertotorin.it/blog/sho-python/"&gt;Read more…&lt;/a&gt; (2 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>finite difference</category><category>jupyter</category><category>python</category><category>sho</category><guid>http://blog.albertotorin.it/blog/sho-python/</guid><pubDate>Sat, 07 Oct 2017 14:00:00 GMT</pubDate></item><item><title>Sound synthesis of multiple degree-of-freedom systems in Matlab: Modal and finite different approach</title><link>http://blog.albertotorin.it/blog/mdof-sound-synthesis/</link><dc:creator>Alberto Torin</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
-    &lt;div class="container" id="notebook-container"&gt;
-
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;p&gt;&lt;a href="http://blog.albertotorin.it/posts/sho-python/"&gt;Read more…&lt;/a&gt; (2 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>finite difference</category><category>jupyter</category><category>python</category><category>sho</category><guid>http://blog.albertotorin.it/posts/sho-python/</guid><pubDate>Sat, 07 Oct 2017 14:00:00 GMT</pubDate></item><item><title>Sound synthesis of multiple degree-of-freedom systems in Matlab: Modal and finite different approach</title><link>http://blog.albertotorin.it/posts/mdof-sound-synthesis/</link><dc:creator>Alberto Torin</dc:creator><description>&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;This post is adapted from a &lt;a href="https://github.com/atorin/Dynamics3-Lecture"&gt;lecture&lt;/a&gt; I gave on multiple degree-of-freedom systems (arrays of masses and springs) and their connection with ideal strings. Part 1 is presented in a previous &lt;a href="http://blog.albertotorin.it/blog/mdof-systems/"&gt;post&lt;/a&gt;, and deals with the nitty-gritty of the theory.&lt;/p&gt;
 &lt;p&gt;Here, the emphasis is given to sound synthesis applications of the mass-spring system. I will explore two simple examples of physical modelling sound synthesis, namely the modal and finite difference methods, and present &lt;a href="https://github.com/atorin/Dynamics3-Lecture"&gt;two basic codes&lt;/a&gt; that produce sounds in this way.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://blog.albertotorin.it/blog/mdof-sound-synthesis/"&gt;Read more…&lt;/a&gt; (7 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>finite difference</category><category>jupyter</category><category>matlab</category><category>modal</category><category>sho</category><category>sound synthesis</category><category>tutorial</category><guid>http://blog.albertotorin.it/blog/mdof-sound-synthesis/</guid><pubDate>Sun, 26 Mar 2017 14:00:00 GMT</pubDate></item><item><title>Multiple degree-of-freedom systems and ideal strings</title><link>http://blog.albertotorin.it/blog/mdof-systems/</link><dc:creator>Alberto Torin</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
-    &lt;div class="container" id="notebook-container"&gt;
-
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;p&gt;&lt;a href="http://blog.albertotorin.it/posts/mdof-sound-synthesis/"&gt;Read more…&lt;/a&gt; (7 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>finite difference</category><category>jupyter</category><category>matlab</category><category>modal</category><category>sho</category><category>sound synthesis</category><category>tutorial</category><guid>http://blog.albertotorin.it/posts/mdof-sound-synthesis/</guid><pubDate>Sun, 26 Mar 2017 14:00:00 GMT</pubDate></item><item><title>Multiple degree-of-freedom systems and ideal strings</title><link>http://blog.albertotorin.it/posts/mdof-systems/</link><dc:creator>Alberto Torin</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;This post is adapted from a &lt;a href="https://github.com/atorin/Dynamics3-Lecture"&gt;lecture&lt;/a&gt; I gave on multiple degree-of-freedom systems (arrays of masses and springs) and their connection with ideal strings. Here's a brief outline:&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Outline"&gt;Outline&lt;a class="anchor-link" href="http://blog.albertotorin.it/blog/mdof-systems/#Outline"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;h5 id="Multiple-degree-of-freedom-systems"&gt;Multiple degree-of-freedom systems&lt;a class="anchor-link" href="http://blog.albertotorin.it/blog/mdof-systems/#Multiple-degree-of-freedom-systems"&gt;¶&lt;/a&gt;&lt;/h5&gt;&lt;hr&gt;
+&lt;h3 id="Outline"&gt;Outline&lt;a class="anchor-link" href="http://blog.albertotorin.it/posts/mdof-systems/#Outline"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;h5 id="Multiple-degree-of-freedom-systems"&gt;Multiple degree-of-freedom systems&lt;a class="anchor-link" href="http://blog.albertotorin.it/posts/mdof-systems/#Multiple-degree-of-freedom-systems"&gt;¶&lt;/a&gt;&lt;/h5&gt;&lt;hr&gt;
 &lt;ul&gt;
 &lt;li&gt;Equations of motion&lt;/li&gt;
 &lt;li&gt;Simple example&lt;/li&gt;
 &lt;li&gt;Normal modes and frequencies&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;a href="http://blog.albertotorin.it/blog/mdof-systems/"&gt;Read more…&lt;/a&gt; (13 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>jupyter</category><category>matlab</category><category>oscillator</category><category>sho</category><category>string</category><guid>http://blog.albertotorin.it/blog/mdof-systems/</guid><pubDate>Fri, 24 Mar 2017 14:00:00 GMT</pubDate></item><item><title>Energy conservation in a finite difference simulation of a simple harmonic oscillator</title><link>http://blog.albertotorin.it/blog/energy-fd-sho/</link><dc:creator>Alberto Torin</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
-    &lt;div class="container" id="notebook-container"&gt;
-
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;p&gt;&lt;a href="http://blog.albertotorin.it/posts/mdof-systems/"&gt;Read more…&lt;/a&gt; (13 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>jupyter</category><category>matlab</category><category>oscillator</category><category>sho</category><category>string</category><guid>http://blog.albertotorin.it/posts/mdof-systems/</guid><pubDate>Fri, 24 Mar 2017 14:00:00 GMT</pubDate></item><item><title>Energy conservation in a finite difference simulation of a simple harmonic oscillator</title><link>http://blog.albertotorin.it/posts/energy-fd-sho/</link><dc:creator>Alberto Torin</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;One key concept in physics is the conservation of energy---in an isolated system, the total energy cannot increase or decrease, it simply remains constant. Thus, the simple lossless harmonic oscillator model defined by the equation&lt;/p&gt;
 $$ M\frac{d^2 u}{dt^2} = -K u $$&lt;p&gt;has an associated energy $H$ defined as&lt;/p&gt;
@@ -58,19 +40,12 @@ $$ H(t) = \frac{M}{2} \left( \frac{du}{dt} \right)^2 + \frac{K}{2} u^2, \qquad \
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Such a concept can also be applied in a numerical simulation, where the existence of a numerical energy-like quantity with certain properties can become a powerful tool in guaranteeing the stability of the scheme.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://blog.albertotorin.it/blog/energy-fd-sho/"&gt;Read more…&lt;/a&gt; (45 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>energy</category><category>finite difference</category><category>julia</category><category>jupyter</category><category>oscillator</category><category>sho</category><guid>http://blog.albertotorin.it/blog/energy-fd-sho/</guid><pubDate>Sat, 12 Nov 2016 14:00:00 GMT</pubDate></item><item><title>Anatomy of a finite difference scheme: How to simulate a simple harmonic oscillator with Julia</title><link>http://blog.albertotorin.it/blog/anatomy-fd-sho/</link><dc:creator>Alberto Torin</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
-    &lt;div class="container" id="notebook-container"&gt;
-
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;p&gt;&lt;a href="http://blog.albertotorin.it/posts/energy-fd-sho/"&gt;Read more…&lt;/a&gt; (45 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>energy</category><category>finite difference</category><category>julia</category><category>jupyter</category><category>oscillator</category><category>sho</category><guid>http://blog.albertotorin.it/posts/energy-fd-sho/</guid><pubDate>Sat, 12 Nov 2016 14:00:00 GMT</pubDate></item><item><title>Anatomy of a finite difference scheme: How to simulate a simple harmonic oscillator with Julia</title><link>http://blog.albertotorin.it/posts/anatomy-fd-sho/</link><dc:creator>Alberto Torin</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;In this post, I will try to analyse a finite difference simulation of a &lt;a href="https://en.wikipedia.org/wiki/Simple_harmonic_motion"&gt;simple harmonic oscillator (SHO) with damping&lt;/a&gt;, and code the algorithm using the programming language Julia. If you are not familiar with Julia, I recommend you visit this website: &lt;a href="http://www.julialang.org"&gt;http://www.julialang.org&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;As you probably know, the equation for an SHO is the following:&lt;/p&gt;
@@ -78,38 +53,30 @@ $$ H(t) = \frac{M}{2} \left( \frac{du}{dt} \right)^2 + \frac{K}{2} u^2, \qquad \
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 $$\frac{d^2 u}{dt^2} = -\omega_0^2 u - 2\sigma \frac{du}{dt} $$
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;where $u$ is the position of the oscillator around the equilibrium point, and $\omega_0$ and $\sigma$ are two positive parameters. This second order differential equation requires two initial conditions to be fully specified, the initial position and velocity of the SHO, i.e.:&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 $$u(0) = u_0, \qquad \text{ and } \qquad \frac{du}{dt}\Bigr|_{t=0} = v_0.$$
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;A &lt;a href="https://en.wikipedia.org/wiki/Finite_difference_method"&gt;finite difference&lt;/a&gt; implementation of this equation requires the discretisation of time in integer multiples of $k$, the time step. Let $u^n$ denote the discrete approximation to $u(t)$ calculated at the discrete time $nk$, with $n$ positive integer. Given the initial values $u^0$ and $u^1$, the idea is to find a recursion that gives $u^2, \dots, u^n$ in a way that is consistent with the continuous equation. Many different schemes are available, which present different properties. One possibility is the following:&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://blog.albertotorin.it/blog/anatomy-fd-sho/"&gt;Read more…&lt;/a&gt; (24 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>finite difference</category><category>julia</category><category>jupyter</category><category>oscillator</category><category>sho</category><guid>http://blog.albertotorin.it/blog/anatomy-fd-sho/</guid><pubDate>Tue, 20 Sep 2016 14:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="http://blog.albertotorin.it/posts/anatomy-fd-sho/"&gt;Read more…&lt;/a&gt; (24 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>finite difference</category><category>julia</category><category>jupyter</category><category>oscillator</category><category>sho</category><guid>http://blog.albertotorin.it/posts/anatomy-fd-sho/</guid><pubDate>Tue, 20 Sep 2016 14:00:00 GMT</pubDate></item></channel></rss>
