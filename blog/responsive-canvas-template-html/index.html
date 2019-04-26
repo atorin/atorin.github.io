@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html prefix="        og: http://ogp.me/ns# article: http://ogp.me/ns/article#     " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content='"How to build a responsive drawing canvas in html"'>
+<meta name="viewport" content="width=device-width">
+<title>A responsive html template for drawing on a canvas | Casual Perambulations</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
+<link rel="canonical" href="http://blog.albertotorin.it/blog/responsive-canvas-template-html/">
+<!--[if lt IE 9]><script src="../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Alberto Torin">
+<link rel="prev" href="../sphinx-tricks-and-hacks/" title="Some tricks and hacks with Sphinx" type="text/html">
+<meta property="og:site_name" content="Casual Perambulations">
+<meta property="og:title" content="A responsive html template for drawing on a canvas">
+<meta property="og:url" content="http://blog.albertotorin.it/blog/responsive-canvas-template-html/">
+<meta property="og:description" content='"How to build a responsive drawing canvas in html"'>
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2019-04-26T15:00:00+01:00">
+<meta property="article:tag" content="canvas">
+<meta property="article:tag" content="html">
+<meta property="article:tag" content="template">
+</head>
+<body>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div id="container">
+         
+    <header id="header"><h1 id="brand"><a href="http://blog.albertotorin.it/" title="Casual Perambulations" rel="home">
+
+        <span id="blog-title">Casual Perambulations</span>
+    </a></h1>
+
+        
+
+        
+    <nav id="menu"><ul>
+<li><a href="../../about/">About</a></li>
+                <li><a href="../../archive.html">Archive</a></li>
+                <li><a href="../../categories/">Tags</a></li>
+                <li><a href="../../rss.xml">RSS feed</a></li>
+
+    
+
+    
+    
+    </ul></nav></header><main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">A responsive html template for drawing on a canvas</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                    Alberto Torin
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2019-04-26T15:00:00+01:00" itemprop="datePublished" title="2019-04-26 15:00">2019-04-26 15:00</time></a>
+            </p>
+                <p class="commentline">
+        
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/responsive-canvas-template-html.html">Comments</a>
+
+
+            
+        </p>
+<p class="sourceline"><a href="index.rst" class="sourcelink">Source</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>I recently built a <a class="reference external" href="https://screebo.herokuapp.com">handwriting recognition system</a> that works in the browser. As you might
+imagine, the main component of the page, beside the machine learning model in
+the background, is the ability to draw a character in the browser.</p>
+<p>In order to do that, you need to use the <cite>&lt;canvas&gt;</cite> element in html. Long story
+short, I created a <a class="reference external" href="https://github.com/atorin/templates/tree/master/html-js">template</a> that you can freely
+use and adapt to your needs.</p>
+<div class="figure align-center">
+<img alt="Drawing a smile in a canvas" src="http://www.albertotorin.it/blog-files/canvas.gif" style="width: 344px;">
+</div>
+<!-- TEASER_END -->
+<p>There are many helpful resources out there, but none that I could find had a
+complete template that worked both on desktop and mobile.</p>
+<p>Implementing a drawing element in your html page is not difficult. Of course,
+you need a bit of JavaScript magic to dynamically change the page, but it's
+just a few lines of code. Here are the main ingredients:</p>
+<ul class="simple">
+<li>a <cite>&lt;canvas&gt;</cite> element: as the name suggests, this is where the drawing will be
+happening;</li>
+<li>a few event listeners that check for the main mouse events (mouse down, mouse
+move, mouse up) and touch screen events;</li>
+<li>a call back function that determines the position of the mouse and draws a
+line when the mouse moves inside the canvas while the user is clicking;</li>
+<li>a button to clear the drawing.</li>
+</ul>
+<p>As you can see, it is not much work, but it's always nice to start from a
+template instead of a blank page. So, feel free to use the <a class="reference external" href="https://github.com/atorin/templates/tree/master/html-js">template I created</a> and please submit
+pull requests if you find bugs!</p>
+<div class="section" id="some-useful-resources">
+<h2>Some useful resources</h2>
+<ul class="simple">
+<li>The <a class="reference external" href="https://www.w3schools.com/html/html5_canvas.asp">official documentation page on canvas</a>
+</li>
+<li>Dealing with <a class="reference external" href="http://bencentra.com/code/2014/12/05/html5-canvas-touch-events.html">touch events in a canvas</a>
+</li>
+</ul>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/canvas/" rel="tag">canvas</a></li>
+            <li><a class="tag p-category" href="../../categories/html/" rel="tag">html</a></li>
+            <li><a class="tag p-category" href="../../categories/template/" rel="tag">template</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../sphinx-tricks-and-hacks/" rel="prev" title="Some tricks and hacks with Sphinx">Previous post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="casualrambles",
+            disqus_url="http://blog.albertotorin.it/blog/responsive-canvas-template-html/",
+        disqus_title="A responsive html template for drawing on a canvas",
+        disqus_identifier="cache/posts/responsive-canvas-template-html.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="casualrambles";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script></main><footer id="footer"><p>Contents © 2019         <a href="mailto:info@albertotorin.it">Alberto Torin</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+<a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+<img alt="Creative Commons License BY" style="border-width:0; margin-bottom:0px;" src="https://i.creativecommons.org/l/by/4.0/80x15.png"></a></p>
+            
+        </footer>
+</div>
+    
+            <script src="../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

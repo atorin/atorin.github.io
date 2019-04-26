@@ -14,6 +14,7 @@
 <link rel="canonical" href="http://blog.albertotorin.it/blog/sphinx-tricks-and-hacks/">
 <!--[if lt IE 9]><script src="../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Alberto Torin">
 <link rel="prev" href="../omegat-quick-start/" title="How to translate a document or review a translation with OmegaT" type="text/html">
+<link rel="next" href="../responsive-canvas-template-html/" title="A responsive html template for drawing on a canvas" type="text/html">
 <meta property="og:site_name" content="Casual Perambulations">
 <meta property="og:title" content="Some tricks and hacks with Sphinx">
 <meta property="og:url" content="http://blog.albertotorin.it/blog/sphinx-tricks-and-hacks/">
@@ -97,13 +98,13 @@
 <p>One of the best options, in my option, is to work with CSV tables. You can create your table in a spreadsheet, without the need to worry about the proper formatting in RST.
 To take care of the PDF output for those long tables that won't fit on a single page, you can use the <code>longtable</code> class. Then, with the <code>tabularcolumns</code> directive, you can control the width of the columns in your PDF.</p>
 <p>This is a sample code snippet to render a table from a CSV file. Check the result in the <a class="reference external" href="http://tables-with-sphinx.readthedocs.io/en/latest/csv-table.html">tutorial</a>.</p>
-<pre class="code rst"><a name="rest_code_e0f939cb1c404df198ef65883690ad17-1"></a><span class="p">..</span> <span class="ow">tabularcolumns</span><span class="p">::</span> |p{1cm}|p{7cm}|
-<a name="rest_code_e0f939cb1c404df198ef65883690ad17-2"></a>
-<a name="rest_code_e0f939cb1c404df198ef65883690ad17-3"></a><span class="p">..</span> <span class="ow">csv-table</span><span class="p">::</span> Caption of the figure
-<a name="rest_code_e0f939cb1c404df198ef65883690ad17-4"></a>   <span class="nc">:file:</span> <span class="nf">path-to-the/file.csv</span>
-<a name="rest_code_e0f939cb1c404df198ef65883690ad17-5"></a>   <span class="nc">:header-rows:</span> <span class="nf">1</span>
-<a name="rest_code_e0f939cb1c404df198ef65883690ad17-6"></a>   <span class="nc">:class:</span> <span class="nf">longtable</span>
-<a name="rest_code_e0f939cb1c404df198ef65883690ad17-7"></a>   <span class="nc">:widths:</span> <span class="nf">1 1</span>
+<pre class="code rst"><a name="rest_code_1392fb4884034628805fbb9f2f862a3c-1"></a><span class="p">..</span> <span class="ow">tabularcolumns</span><span class="p">::</span> |p{1cm}|p{7cm}|
+<a name="rest_code_1392fb4884034628805fbb9f2f862a3c-2"></a>
+<a name="rest_code_1392fb4884034628805fbb9f2f862a3c-3"></a><span class="p">..</span> <span class="ow">csv-table</span><span class="p">::</span> Caption of the figure
+<a name="rest_code_1392fb4884034628805fbb9f2f862a3c-4"></a>   <span class="nc">:file:</span> <span class="nf">path-to-the/file.csv</span>
+<a name="rest_code_1392fb4884034628805fbb9f2f862a3c-5"></a>   <span class="nc">:header-rows:</span> <span class="nf">1</span>
+<a name="rest_code_1392fb4884034628805fbb9f2f862a3c-6"></a>   <span class="nc">:class:</span> <span class="nf">longtable</span>
+<a name="rest_code_1392fb4884034628805fbb9f2f862a3c-7"></a>   <span class="nc">:widths:</span> <span class="nf">1 1</span>
 </pre>
 <p>This approach also works if you use a <a class="reference external" href="http://www.sphinx-doc.org/en/master/rest.html#tables">grid table</a> instead of a CSV table, with the proper changes.</p>
 <div class="section" id="convert-html-tables-to-rst">
@@ -125,6 +126,9 @@ To take care of the PDF output for those long tables that won't fit on a single 
 <ul class="pager hidden-print">
 <li class="previous">
                 <a href="../omegat-quick-start/" rel="prev" title="How to translate a document or review a translation with OmegaT">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../responsive-canvas-template-html/" rel="next" title="A responsive html template for drawing on a canvas">Next post</a>
             </li>
         </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
         

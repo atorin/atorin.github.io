@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://blog.albertotorin.it/</loc>
-  <lastmod>2019-04-20T19:41:00Z</lastmod>
+  <lastmod>2019-04-26T19:57:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.albertotorin.it/2016/</loc>
@@ -22,12 +22,16 @@
   <lastmod>2019-04-20T18:30:00Z</lastmod>
  </url>
  <url>
+  <loc>http://blog.albertotorin.it/2019/</loc>
+  <lastmod>2019-04-26T19:57:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://blog.albertotorin.it/about/</loc>
   <lastmod>2019-04-20T19:05:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.albertotorin.it/archive.html</loc>
-  <lastmod>2019-04-26T13:30:00Z</lastmod>
+  <lastmod>2019-04-26T19:57:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.albertotorin.it/blog/anatomy-fd-sho/</loc>
@@ -50,6 +54,10 @@
   <lastmod>2019-04-20T19:41:00Z</lastmod>
  </url>
  <url>
+  <loc>http://blog.albertotorin.it/blog/responsive-canvas-template-html/</loc>
+  <lastmod>2019-04-26T19:57:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://blog.albertotorin.it/blog/sho-python/</loc>
   <lastmod>2019-04-20T19:41:00Z</lastmod>
  </url>
@@ -59,7 +67,11 @@
  </url>
  <url>
   <loc>http://blog.albertotorin.it/categories/</loc>
-  <lastmod>2019-04-20T18:30:00Z</lastmod>
+  <lastmod>2019-04-26T19:57:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.albertotorin.it/categories/canvas/</loc>
+  <lastmod>2019-04-26T19:57:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.albertotorin.it/categories/cat-tools/</loc>
@@ -72,6 +84,10 @@
  <url>
   <loc>http://blog.albertotorin.it/categories/finite-difference/</loc>
   <lastmod>2019-04-20T18:30:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.albertotorin.it/categories/html/</loc>
+  <lastmod>2019-04-26T19:57:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.albertotorin.it/categories/julia/</loc>
@@ -120,6 +136,10 @@
  <url>
   <loc>http://blog.albertotorin.it/categories/string/</loc>
   <lastmod>2019-04-20T18:30:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.albertotorin.it/categories/template/</loc>
+  <lastmod>2019-04-26T19:57:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.albertotorin.it/categories/translation/</loc>
